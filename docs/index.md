@@ -1,4 +1,4 @@
-# Welcome to the SmartCLIDE integrated platform.
+# Welcome to the SmartCLIDE integrated platform--.
 The SmartCLIDE project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 871177.
 
 For more general information about the SmartCLIDE project visit [smartclide.eu](https://smartclide.eu/).
