@@ -1,3 +1,12 @@
 site_name: SmartCLIDE General Documentation
+site_url: https://eclipse-researchlabs.github.io/smartclide-docs/
 
-theme: readthedocs
+theme:
+    name: readthedocs
+
+# plugins:
+#  - multirepo:
+
+nav:
+  - Home: 'index.md'
+#  - Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
