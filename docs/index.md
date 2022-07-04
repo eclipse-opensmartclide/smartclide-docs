@@ -30,3 +30,7 @@ The SmartCLIDE platform consists of the following modules:
 6. Front-end Interface
 7. SmartCLIDE API Gateway
 8. SmartCLIDE DB API
+
+## License
+
+Distribute under the Eclipse Public License 2.0. See [LICENSE](https://github.com/eclipse-researchlabs/smartclide-docs/blob/master/LICENSE) for more information.

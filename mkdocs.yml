@@ -1,4 +1,4 @@
-site_name: SmartCLIDE
+site_name: SmartCLIDE Docs
 site_url: https://eclipse-researchlabs.github.io/smartclide-docs/
 plugins:
   - search:
@@ -8,3 +8,9 @@ nav:
   - Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
 theme: readthedocs
 copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
+
+extra:
+  version: v1.0
+  social:
+    - icon: fontawesome/brands/twitter
+    - link: https://twitter.com/squidfunk
