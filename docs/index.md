@@ -33,4 +33,4 @@ The SmartCLIDE platform consists of the following modules:
 
 ## License
 
-Distribute under the Eclipse Public License 2.0. See [LICENSE](https://github.com/eclipse-researchlabs/smartclide-docs/blob/master/LICENSE) for more information.
+Distributed under the Eclipse Public License 2.0. See [LICENSE](https://github.com/eclipse-researchlabs/smartclide-docs/blob/master/LICENSE) for more information.
