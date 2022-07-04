@@ -20,13 +20,13 @@ SmartCLIDE will allow SMEs and Public Administration to boost the adoption of Cl
 
 ## Modules
 
-The SmartCLIDE platform consists of the following core modules:
+The SmartCLIDE platform consists of the following modules:
 
-1. Service Creation
-2. Service Discovery
-2. Service Deployment
-3. Context Handling
-4. Runtime Monitoring & Verification
-5. Front-end Interface
-6. SmartCLIDE API Gateway
-7. SmartCLIDE DB API
+1. Context Handling
+2. Service Creation
+3. Service Discovery
+4. Service Deployment 
+5. Runtime Monitoring & Verification (RMV)
+6. Front-end Interface
+7. SmartCLIDE API Gateway
+8. SmartCLIDE DB API
