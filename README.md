@@ -1,7 +1,7 @@
 # Welcome to the SmartCLIDE integrated platform.
 The SmartCLIDE project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 871177.
 
-For more general information about the SmartCLIDE project visit [smartclide.eu](https://smartclide.eu/).
+For more general information about the SmartCLIDE project visit [our website](https://smartclide.eu/).
 
 ## About the project
 
@@ -30,3 +30,23 @@ The SmartCLIDE platform consists of the following modules:
 6. Front-end Interface
 7. SmartCLIDE API Gateway
 8. SmartCLIDE DB API
+
+## Consortium
+
+The SmartCLIDE Consortium consists of the following partners:
+
+1. [ATB](https://www.atb-bremen.de/)
+2. [Netcompany-Intrasoft](https://www.netcompany-intrasoft.com/)
+3. [AIR](https://air-institute.com/)
+4. [University of Macedonia (UoM)](https://www.uom.gr/en)
+5. [Centre for Research and Technology Hellas (CERTH)](https://www.certh.gr/root.en.aspx)
+6. [The Open Group](https://www.opengroup.org/)
+7. [Eclipse Foundation](https://www.eclipse.org/)
+8. [Wellness Telecom](https://wellnesstg.com/en/)
+9. [UNPARALLEL](https://www.unparallel.pt/)
+10. [CONTACT Software](https://www.contact-software.com/en/)
+11. [KAIROS Digital Solutions](https://kairosds.com/)
+
+## License
+
+Distributed under the Eclipse Public License 2.0. See [LICENSE](https://github.com/eclipse-researchlabs/smartclide-docs/blob/master/LICENSE) for more information.
