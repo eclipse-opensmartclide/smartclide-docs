@@ -1,4 +1,4 @@
-site_name: SmartCLIDE General Documentation
+site_name: SmartCLIDE
 site_url: https://eclipse-researchlabs.github.io/smartclide-docs/
 plugins:
   - search:
