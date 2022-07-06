@@ -6,6 +6,18 @@ plugins:
 nav:
   - Home: 'index.md'
   - Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
+  - Service Creation:
+    - Service Creation Backend: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation?branch=main'
+    - Service Maintenance:
+      - Backend TD Principal: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Principal?branch=main'
+      - Backend TD Interest: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Interest?branch=main'
+      - Backend Reusability Index: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Index?branch=main'
+      - Frontend TD & Reusability: '!import https://github.com/eclipse-researchlabs/smartclide-td-reusability-theia?branch=main'
+    - Test Generation:
+      - Backend: '!import https://github.com/eclipse-researchlabs/smartclide-Service-Creation-Testing?branch=main'
+      - Frontend: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation-theia?branch=main'
+    - Design Patterns: '!import https://github.com/eclipse-researchlabs/smartclide-design-pattern-selection-theia?branch=main'
+  
 theme: readthedocs
 copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
 
