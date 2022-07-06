@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/backend/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Service Creation Testing - SmartCLIDE Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Service Creation Testing";
+        var mkdocs_page_input_path = "backend/index.md";
+        var mkdocs_page_url = "/smartclide-docs/backend/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SmartCLIDE Docs
+        </a>
+        <div class="version">
+          v1.0
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Context Handling</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../context-handling/">Context Handling</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Creation</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Service Creation Backend</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../service-creation-backend/">Service Creation Backend</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Service Maintenance</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Backend TD Principal</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../backend-td-principal/">TD Principal Backend</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Backend TD Interest</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../backend-td-interest/">TD Interest Backend</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Backend Reusability Index</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../backend-reusability-index/">TD Reusability Index Backend</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Frontend TD & Reusability</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../frontend-td-reusability/">TD & Reusability Frontend</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Test Generation</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Backend</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Service Creation Testing</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#preconditions-to-build-and-run-service-creation-testing">Preconditions to build and run Service Creation Testing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-build-service-creation-testing">How to build Service Creation Testing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-run-service-creation-testing">How to run Service Creation Testing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use-service-creation-testing">How to use Service Creation Testing</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Frontend</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../frontend/">Service Creation Testing Frontend</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Design Patterns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../design-patterns/">Design Pattern Selection Frontend</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SmartCLIDE Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Service Creation &raquo;</li>
+          <li>Test Generation &raquo;</li>
+          <li>Backend &raquo;</li><li>Service Creation Testing</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/eclipse-researchlabs/smartclide-Service-Creation-Testingdocs/*docs/index.md"> Edit on </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="smartclide-service-creation-testing">Smartclide Service Creation Testing</h1>
+<p>SmartCLIDE Service Creation Testing Backend Component</p>
+<h2 id="preconditions-to-build-and-run-service-creation-testing">Preconditions to build and run Service Creation Testing</h2>
+<p>To build and run the backend service of Service Creation Testing, the following software is required:</p>
+<ul>
+<li>Java (at least version 8)</li>
+<li>Apache Maven (at least version 3.2+)</li>
+<li>Docker (for building and running the final image)</li>
+</ul>
+<h2 id="how-to-build-service-creation-testing">How to build Service Creation Testing</h2>
+<p>Service Creation Testing can be built using maven with the following command:</p>
+<pre><code class="language-shell">mvn install
+</code></pre>
+<p>In order to build a Docker image of the service that can be deployed, the following commands can be used:</p>
+<pre><code class="language-shell">mvn install
+docker build -t ${IMAGE_NAME:IMAGE_TAG} .
+</code></pre>
+<p>More specifically:</p>
+<pre><code class="language-shell">mvn install
+docker build -t smartclide-service-creation-testing-backend:latest .
+</code></pre>
+<h2 id="how-to-run-service-creation-testing">How to run Service Creation Testing</h2>
+<p>All the images of this component can be found <a href="https://github.com/eclipse-researchlabs/smartclide-Service-Creation-Testing/pkgs/container/smartclide%2Fservice-creation-test-generation">here</a>.</p>
+<p>You can run the backend service with the following command:</p>
+<pre><code class="language-shell">docker run smartclide-service-creation-testing-backend:latest
+</code></pre>
+<h2 id="how-to-use-service-creation-testing">How to use Service Creation Testing</h2>
+<p>This Spring Boot application generates automatically Unit tests, for a given project.</p>
+<p>The service includes one endpoint:</p>
+<p><strong>Endpoint:</strong> "/generateTests" -&gt; automatic generation of Unit tests.  <br />
+<strong>Request parameters:</strong>  <br />
+<strong>gitRepoURL</strong> -&gt; String  <br />
+<strong>gitUsername</strong> -&gt; String  <br />
+<strong>gitToken</strong> -&gt; String </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../frontend-td-reusability/" class="btn btn-neutral float-left" title="TD & Reusability Frontend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../frontend/" class="btn btn-neutral float-right" title="Service Creation Testing Frontend">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2022 The SmartCLIDE Consortium</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../frontend-td-reusability/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../frontend/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
