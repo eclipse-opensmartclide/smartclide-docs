@@ -24,12 +24,10 @@ The SmartCLIDE platform consists of the following modules:
 
 1. Context Handling
 2. Service Creation
-3. Service Discovery
-4. Service Deployment 
-5. Runtime Monitoring & Verification (RMV)
-6. Front-end Interface
-7. SmartCLIDE API Gateway
-8. SmartCLIDE DB API
+	* Service Creation
+	* Service Maintenance
+	* Test Generation
+	* Design Patterns
 
 ## Consortium
 
