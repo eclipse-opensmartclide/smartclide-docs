@@ -28,6 +28,8 @@ The SmartCLIDE platform consists of the following modules:
 	* Service Maintenance
 	* Test Generation
 	* Design Patterns
+3. Service Discovery
+4. Smart Assistant (Deep Learning Engine - DLE)
 
 ## Consortium
 
