@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/design-patterns/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/service-discovery/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Design Pattern Selection Frontend - SmartCLIDE Docs</title>
+    <title>Service Discovery - SmartCLIDE Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Design Pattern Selection Frontend";
-        var mkdocs_page_input_path = "design-patterns/index.md";
-        var mkdocs_page_url = "/smartclide-docs/design-patterns/";
+        var mkdocs_page_name = "Service Discovery";
+        var mkdocs_page_input_path = "service-discovery/index.md";
+        var mkdocs_page_url = "/smartclide-docs/service-discovery/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -104,27 +104,23 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Design Patterns</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Design Pattern Selection Frontend</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#preconditions-to-build-and-run-design-pattern-selection-frontend">Preconditions to build and run Design Pattern Selection Frontend</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#how-to-build-design-pattern-selection-frontend">How to build Design Pattern Selection Frontend</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#how-to-run-design-pattern-selection-frontend">How to run Design Pattern Selection Frontend</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#running-the-browser-example">Running the browser example</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Design Patterns</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../design-patterns/">Design Pattern Selection Frontend</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Service Discovery</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../service-discovery/">Service Discovery</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Service Discovery</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Service Discovery</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#configure">Configure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#build">Build</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run">Run</a>
+    </li>
+    </ul>
                 </li>
     </ul>
                   </li>
@@ -144,9 +140,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Service Creation &raquo;</li>
-          <li>Design Patterns &raquo;</li><li>Design Pattern Selection Frontend</li>
+          <li>Service Discovery &raquo;</li><li>Service Discovery</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/eclipse-researchlabs/smartclide-design-pattern-selection-theiadocs/*docs/index.md"> Edit on </a>
+        <a href="https://github.com/eclipse-researchlabs/smartclide-service-discovery-pocdocs/*docs/index.md"> Edit on </a>
     </li>
   </ul>
   <hr/>
@@ -155,37 +151,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="smartclide-design-pattern-selection">Smartclide Design Pattern Selection</h1>
-<p>SmartCLIDE Design Pattern Selection Frontend Component</p>
-<h2 id="preconditions-to-build-and-run-design-pattern-selection-frontend">Preconditions to build and run Design Pattern Selection Frontend</h2>
-<p>To build and run the frontend Design Pattern Selection extension of Theia, the following software is required:</p>
-<ul>
-<li>Python</li>
-<li>Node.js with visual studio build tools (this can be selected in the optional tools during the node.js installation or after hand in several ways, ex. with npm, or with visual studio installer)</li>
-<li>Yarn package manager npm install --global yarn</li>
-</ul>
-<h2 id="how-to-build-design-pattern-selection-frontend">How to build Design Pattern Selection Frontend</h2>
-<p>The Design Pattern Selection Frontend can be built using the following command:</p>
-<pre><code class="language-shell">yarn
+                <!--
+   Copyright (C) 2021-2022 AIR Institute
+
+   This program and the accompanying materials are made
+   available under the terms of the Eclipse Public License 2.0
+   which is available at https://www.eclipse.org/legal/epl-2.0/
+
+   SPDX-License-Identifier: EPL-2.0
+
+   Contributors:
+       David Berrocal Macías (@dabm-git) - initial API and implementation
+-->
+<h1 id="service-discovery-api-smartclide">Service Discovery API - SmartCLIDE</h1>
+<p>Maintainer:  @dabm-git - AIR Institute</p>
+<h2 id="configure">Configure</h2>
+<p>This package relies on tokens from GitGub, GitLab and BitBucket APIs that are configured in the config.ini file in the root of the service.
+The service also depends on an instance of Elasticsearch to store and collect information, where the configuration of the IP, port and credentials are done in this same file.
+    See: https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc/blob/main/ServiceDiscovery/config.ini</p>
+<p>The service makes use of the 2020 port, be sure to expose it.</p>
+<h2 id="build">Build</h2>
+<pre><code>    python3 -m pip install --no-cache-dir -r requirements.txt
+    python3 -m pip install . --upgrade
 </code></pre>
-<h2 id="how-to-run-design-pattern-selection-frontend">How to run Design Pattern Selection Frontend</h2>
-<p>After building the theia extension, you can start a local instance of theia with our extension.</p>
-<h3 id="running-the-browser-example">Running the browser example</h3>
-<pre><code class="language-shell">yarn start:browser
+<p>Or build the image with the provided dockerfile.</p>
+<h2 id="run">Run</h2>
+<pre><code>python3 servicediscovery
 </code></pre>
-<p><em>or:</em></p>
-<pre><code class="language-shell">yarn rebuild:browser
-cd browser-app
-yarn start
+<p>Or using the built docker image hosted by ghcr.io, with docker-compose.</p>
+<pre><code>docker-compose up
 </code></pre>
-<p><em>or:</em> launch <code>Start Browser Backend</code> configuration from VS code.</p>
-<p>Open http://localhost:3000 in the browser.</p>
+<pre><code>version: '3'
+
+services:
+  service_discovery:
+    restart: unless-stopped
+    image: ghcr.io/eclipse-researchlabs/smartclide/service-discovery:2022-04-04
+    working_dir: /app/smartclide-service-discovery-poc/ServiceDiscovery
+    command: python3 ServiceDiscovery
+    ports:
+      - &quot;2020:2020&quot;
+</code></pre>
+<p>Be sure to replace the necessary configuration in the <a href="https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc/blob/main/ServiceDiscovery/config.ini">config.ini</a> file, to do this you can overwrite it with the following section in docker-compose.yml:</p>
+<pre><code>volumes:
+ -./config.ini:/app/smartclide-service-discovery-poc/ServiceDiscovery/config.ini
+</code></pre>
+<h1 id="web-service-listings-smartclide">Web service listings - SmartCLIDE</h1>
+<p>Maintainer:  @dabm-git - AIR Institute</p>
+<h2 id="run_1">Run</h2>
+<p>This script collects information from Programableweb, to avoid saturation and blocking of IP addresses by a high number of requests, this script can be executed on a regular basis, obtaining a section each time.</p>
+<p>When launched, information is collected in batches that are exported to .csv files, and when a batch is finished, the results are merged under the same .csv file.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../frontend/" class="btn btn-neutral float-left" title="Service Creation Testing Frontend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../service-discovery/" class="btn btn-neutral float-right" title="Service Discovery">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../design-patterns/" class="btn btn-neutral float-left" title="Design Pattern Selection Frontend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -209,10 +229,8 @@ yarn start
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../frontend/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../design-patterns/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../service-discovery/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
