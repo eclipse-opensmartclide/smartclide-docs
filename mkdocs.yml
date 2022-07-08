@@ -18,6 +18,7 @@ nav:
       - Frontend: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation-theia?branch=main'
     - Design Patterns: '!import https://github.com/eclipse-researchlabs/smartclide-design-pattern-selection-theia?branch=main'
     - Service Discovery: '!import https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc?branch=main'
+    - Smart Assistant: '!import https://github.com/eclipse-researchlabs/smartclide-smart-assistant?branch=main'
   
 theme: readthedocs
 copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
