@@ -53,7 +53,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Service Creation</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="#">Service Creation Backend</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../service-creation-backend/">Service Creation Backend</a>
@@ -110,50 +110,76 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Service Discovery</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../service-discovery/">Service Discovery</a>
-                </li>
-    </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Discovery</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-discovery/">Service Discovery</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Smart Assistant</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Assistant</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Smartclide-DLE</a>
     <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Smartclide-DLE</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#how-to-build-dle-component">How to Build DLE component</a>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-build-dle-component">How to Build DLE component</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#api-gateway-installation">API Gateway Installation</a>
+    <li class="toctree-l3"><a class="reference internal" href="#api-gateway-installation">API Gateway Installation</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sub-component-quick-installation">Sub-component Quick Installation</a>
+    <li class="toctree-l3"><a class="reference internal" href="#sub-component-quick-installation">Sub-component Quick Installation</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#how-to-run-dle-component">How to run DLE Component</a>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-run-dle-component">How to run DLE Component</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#run-application">Run application</a>
+    <li class="toctree-l3"><a class="reference internal" href="#run-application">Run application</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#dle-sub-components">DLE Sub-components</a>
+    <li class="toctree-l2"><a class="reference internal" href="#dle-sub-components">DLE Sub-components</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#service-classification-model">Service classification model</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#code-completion-model">Code completion model</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#acceptance-test-suggestions-model">Acceptance test suggestions model</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#predictive-model-tool-api">Predictive model tool API</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#bpmn-items-suggestions">BPMN Items suggestions</a>
+    <li class="toctree-l3"><a class="reference internal" href="#service-classification-model">Service classification model</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
     </li>
         </ul>
     </li>
-    </ul>
-                </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-completion-model">Code completion model</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#acceptance-test-suggestions-model">Acceptance test suggestions model</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#case-database-initialization">Case database initialization</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-case">Add case</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#documentation">Documentation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#predictive-model-tool-api">Predictive model tool API</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#configuration_1">Configuration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bpmn-items-suggestions">BPMN Items suggestions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -171,7 +197,6 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Service Creation &raquo;</li>
           <li>Smart Assistant &raquo;</li><li>Smartclide-DLE</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://github.com/eclipse-researchlabs/smartclide-smart-assistantdocs/*docs/index.md"> Edit on </a>
