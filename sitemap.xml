@@ -6,6 +6,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/admin-guide/</loc>
+         <lastmod>2022-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/concepts/</loc>
+         <lastmod>2022-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/getting-started/</loc>
+         <lastmod>2022-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/user-guide/</loc>
+         <lastmod>2022-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/backend/</loc>
          <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
