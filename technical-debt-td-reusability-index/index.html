@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/backend-td-interest/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/technical-debt-td-reusability-index/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>TD Interest Backend - SmartCLIDE Docs</title>
+    <title>TD Reusability Index Backend - SmartCLIDE Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "TD Interest Backend";
-        var mkdocs_page_input_path = "backend-td-interest/index.md";
-        var mkdocs_page_url = "/smartclide-docs/backend-td-interest/";
+        var mkdocs_page_name = "TD Reusability Index Backend";
+        var mkdocs_page_input_path = "technical-debt-td-reusability-index/index.md";
+        var mkdocs_page_url = "/smartclide-docs/technical-debt-td-reusability-index/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -69,72 +69,55 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Service Creation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-creation/">Service Creation Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Principal</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-principal/">TD Principal Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Interest</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-interest/">TD Interest Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Reusability Index</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="#">Service Creation Backend</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../service-creation-backend/">Service Creation Backend</a>
-                </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">TD Reusability Index Backend</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#preconditions-to-build-and-run-td-reusability">Preconditions to build and run TD Reusability</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-build-td-reusability-index">How to build TD Reusability Index</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-run-td-reusability-index">How to run TD Reusability Index</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#extra-dependencies-of-td-reusability-index">Extra dependencies of TD Reusability Index</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Service Maintenance</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="#">Backend TD Principal</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../backend-td-principal/">TD Principal Backend</a>
-                </li>
-    </ul>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Backend TD Interest</a>
-    <ul class="current">
-                <li class="toctree-l3 current"><a class="reference internal current" href="./">TD Interest Backend</a>
-    <ul class="current">
-    <li class="toctree-l4"><a class="reference internal" href="#preconditions-to-build-and-run-td-interest">Preconditions to build and run TD Interest</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#how-to-build-td-interest">How to build TD Interest</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#how-to-run-td-interest">How to run TD Interest</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#extra-dependencies-of-td-interest">Extra dependencies of TD Interest</a>
-    </li>
-    </ul>
-                </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Backend Reusability Index</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../backend-reusability-index/">TD Reusability Index Backend</a>
-                </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Frontend TD & Reusability</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../frontend-td-reusability/">TD & Reusability Frontend</a>
-                </li>
-    </ul>
-                </li>
-    </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Reusability Index (Theia)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-reusability-index-theia/">TD & Reusability Frontend</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Test Generation</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="#">Backend</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../backend/">Service Creation Testing</a>
-                </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Frontend</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../frontend/">Service Creation Testing Frontend</a>
-                </li>
-    </ul>
-                </li>
-    </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Creation Testing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-creation-testing/">Service Creation Testing</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Design Patterns</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../design-patterns/">Design Pattern Selection Frontend</a>
-                </li>
-    </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Creation Testing (Theia)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-creation-testing-theia/">Service Creation Testing Frontend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Design Patterns</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../design-patterns/">Design Pattern Selection Frontend</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Service Discovery</span></p>
@@ -166,11 +149,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Service Creation &raquo;</li>
-          <li>Service Maintenance &raquo;</li>
-          <li>Backend TD Interest &raquo;</li><li>TD Interest Backend</li>
+          <li>Technical Debt (TD) Reusability Index &raquo;</li><li>TD Reusability Index Backend</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/eclipse-researchlabs/smartclide-TD-Interestdocs/*docs/index.md"> Edit on </a>
+        <a href="https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Indexdocs/*docs/index.md"> Edit on </a>
     </li>
   </ul>
   <hr/>
@@ -179,17 +160,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="smartclide-td-interest">Smartclide TD Interest</h1>
-<p>SmartCLIDE TD Interest Backend Component</p>
-<h2 id="preconditions-to-build-and-run-td-interest">Preconditions to build and run TD Interest</h2>
-<p>To build and run the backend service of TD Interest, the following software is required:</p>
+                <h1 id="smartclide-td-reusability-index">Smartclide TD Reusability Index</h1>
+<p>SmartCLIDE TD Reusability Index Backend Component</p>
+<h2 id="preconditions-to-build-and-run-td-reusability">Preconditions to build and run TD Reusability</h2>
+<p>To build and run the backend service of TD Reusability Index, the following software is required:</p>
 <ul>
 <li>Java (at least version 11)</li>
 <li>Apache Maven (at least version 3.2+)</li>
 <li>Docker (for building and running the final image)</li>
 </ul>
-<h2 id="how-to-build-td-interest">How to build TD Interest</h2>
-<p>TD Interest can be built using maven with the following command:</p>
+<h2 id="how-to-build-td-reusability-index">How to build TD Reusability Index</h2>
+<p>TD Reusability Index can be built using maven with the following command:</p>
 <pre><code class="language-shell">mvn install
 </code></pre>
 <p>In order to build a Docker image of the service that can be deployed, the following commands can be used:</p>
@@ -198,27 +179,23 @@ docker build -t ${IMAGE_NAME:IMAGE_TAG} .
 </code></pre>
 <p>More specifically:</p>
 <pre><code class="language-shell">mvn install
-docker build -t smartclide-td-interest-backend:latest .
+docker build -t smartclide-td-reusability-index-backend:latest .
 </code></pre>
-<h2 id="how-to-run-td-interest">How to run TD Interest</h2>
-<p>All the images of this component can be found <a href="https://github.com/eclipse-researchlabs/smartclide-TD-Interest/pkgs/container/smartclide%2Ftdinterest">here</a>.</p>
+<h2 id="how-to-run-td-reusability-index">How to run TD Reusability Index</h2>
+<p>All the images of this component can be found <a href="https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Index/pkgs/container/smartclide%2Ftdreusability">here</a>.</p>
 <p>You can run the backend service with the following command:</p>
-<pre><code class="language-shell">docker run smartclide-td-interest-backend:latest
+<pre><code class="language-shell">docker run smartclide-td-reusability-index-backend:latest
 </code></pre>
-<h2 id="extra-dependencies-of-td-interest">Extra dependencies of TD Interest</h2>
-<p>This component uses an internal database in order to calculate the TD Interest, as from its definition requires historical data.
-This database is a postgresql where the schema can be found <a href="https://github.com/eclipse-researchlabs/smartclide-TD-Interest/blob/main/src/main/resources/database/schema.sql">here</a>.</p>
-<p>After the creation of the database, the properties for accessing the database can be changed from 
-<a href="https://github.com/eclipse-researchlabs/smartclide-TD-Interest/blob/main/src/main/resources/application.properties">here</a>. In order to change the database url, username, and password.
-- spring.datasource.url=jdbc:postgresql://localhost:5432/tdinterest
-- spring.datasource.username=tdinterest
-- spring.datasource.password=tdinterest</p>
+<h3 id="extra-dependencies-of-td-reusability-index">Extra dependencies of TD Reusability Index</h3>
+<p>This backend has an external dependency with the <a href="https://github.com/eclipse-researchlabs/smartclide-TD-Interest">TD Interest</a>, in order to get the metrics of a specific project.
+This dependency is visible through the <strong><a href="https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Index/blob/main/src/main/resources/application.properties">application.properties</a></strong> file, where there is the following variable:
+- interest-service.url</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../backend-td-principal/" class="btn btn-neutral float-left" title="TD Principal Backend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../backend-reusability-index/" class="btn btn-neutral float-right" title="TD Reusability Index Backend">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../technical-debt-td-interest/" class="btn btn-neutral float-left" title="TD Interest Backend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../technical-debt-td-reusability-index-theia/" class="btn btn-neutral float-right" title="TD & Reusability Frontend">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -242,10 +219,10 @@ This database is a postgresql where the schema can be found <a href="https://git
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../backend-td-principal/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../technical-debt-td-interest/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../backend-reusability-index/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../technical-debt-td-reusability-index-theia/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
