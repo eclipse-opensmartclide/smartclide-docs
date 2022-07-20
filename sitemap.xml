@@ -2,62 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/backend/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/backend-reusability-index/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/backend-td-interest/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/backend-td-principal/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/context-handling/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/design-patterns/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/frontend/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/frontend-td-reusability/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/runtime-monitoring-verification/</loc>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/service-creation-backend/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/service-discovery/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/smart-assistant/</loc>
-         <lastmod>2022-07-08</lastmod>
+         <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
