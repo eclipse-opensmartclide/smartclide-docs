@@ -5,6 +5,10 @@ plugins:
   - multirepo:
 nav:
   - Home: 'index.md'
+  - Getting started: 'getting-started.md'
+  - User Guide: 'user-guide.md'
+  - Admin Guide: 'admin-guide.md'
+  - Concepts: 'concepts.md'
   - Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
   - Service Creation:
     - Service Creation Backend: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation?branch=main'
