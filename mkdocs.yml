@@ -21,6 +21,10 @@ nav:
   - Service Discovery: '!import https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc?branch=main'
   - Smart Assistant: '!import https://github.com/eclipse-researchlabs/smartclide-smart-assistant?branch=main'
   - Runtime Monitoring & Verification: '!import https://github.com/eclipse-researchlabs/smartclide-RMV?branch=main'
+  - Database API: '!import https://github.com/eclipse-researchlabs/smartclide-db-api?branch=main'
+  - API Gateway: '!import https://github.com/eclipse-researchlabs/smartclide-api-gateway?branch=main'
+  - Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-researchlabs/smartclide-broker?branch=main'
+
   
 theme: readthedocs
 copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
