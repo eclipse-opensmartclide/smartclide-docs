@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/database-api/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>DB API - SmartCLIDE Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DB API";
+        var mkdocs_page_input_path = "database-api/index.md";
+        var mkdocs_page_url = "/smartclide-docs/database-api/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SmartCLIDE Docs
+        </a>
+        <div class="version">
+          v1.0
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../user-guide/">User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../admin-guide/">Admin Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../concepts/">Concepts</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Context Handling</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../context-handling/">Context Handling</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Creation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-creation/">Service Creation Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Principal</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-principal/">TD Principal Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Interest</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-interest/">TD Interest Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Reusability Index</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-reusability-index/">TD Reusability Index Backend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Debt (TD) Reusability Index (Theia)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../technical-debt-td-reusability-index-theia/">TD & Reusability Frontend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Creation Testing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-creation-testing/">Service Creation Testing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Creation Testing (Theia)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-creation-testing-theia/">Service Creation Testing Frontend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Design Patterns</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../design-patterns/">Design Pattern Selection Frontend</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Service Discovery</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../service-discovery/">Service Discovery</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Assistant</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../smart-assistant/">Smartclide-DLE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Runtime Monitoring & Verification</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../runtime-monitoring-verification/">SmartCLIDE-RMV</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Database API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">DB API</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#users-getpostputdelete">/users (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#teams-getpostputdelete">/teams (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_1">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_1">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ci_managers-getpostputdelete">/ci_managers (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_2">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_2">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deployment_platforms-getpostputdelete">/deployment_platforms (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_3">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_3">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#service_registries-getpostputdelete">/service_registries (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_4">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_4">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#git_credentials-getpostputdelete">/git_credentials (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_5">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_5">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#services-getpostputdelete">/services (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_6">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_6">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#workflows-getpostputdelete">/workflows (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_7">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_7">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deployments-getpostputdelete">/deployments (GET,POST,PUT,DELETE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-post-request_8">Example POST Request</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-request-body_8">Example Request body</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Gateway</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api-gateway/">API Gateway</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Message-Oriented Middleware (MoM)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../message-oriented-middleware-mom/">MOM</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SmartCLIDE Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Database API &raquo;</li><li>DB API</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/eclipse-researchlabs/smartclide-db-apidocs/*docs/index.md"> Edit on </a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="smartclide-db-api">smartclide-db-api</h1>
+<p>A RESTful API for accessing the SmartCLIDE database (MongoDB). The API exposes the following endpoints:</p>
+<h2 id="users-getpostputdelete">/users (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request">Example POST Request</h3>
+<pre><code class="language-url">/users
+</code></pre>
+<h3 id="example-request-body">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;email&quot;: &quot;test@mail.com&quot;,
+    &quot;team_id&quot;: &quot;628c87f6aa5a2857398a80d8&quot;
+}   
+</code></pre>
+<h2 id="teams-getpostputdelete">/teams (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_1">Example POST Request</h3>
+<pre><code class="language-url">/teams
+</code></pre>
+<h3 id="example-request-body_1">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test team&quot;,
+    &quot;workflows&quot;: [],
+    &quot;services&quot;: [],
+    &quot;deployments&quot;: []
+}   
+</code></pre>
+<h2 id="ci_managers-getpostputdelete">/ci_managers (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_2">Example POST Request</h3>
+<pre><code class="language-url">/ci_managers
+</code></pre>
+<h3 id="example-request-body_2">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;type&quot;: &quot;jenkins&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test_user&quot;,
+    &quot;token&quot;: &quot;giuggff8ff7igfigfiugi...&quot;
+}   
+</code></pre>
+<h2 id="deployment_platforms-getpostputdelete">/deployment_platforms (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_3">Example POST Request</h3>
+<pre><code class="language-url">/deployment_platforms
+</code></pre>
+<h3 id="example-request-body_3">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test_user&quot;,
+    &quot;token&quot;: &quot;giuggff8ff7igfigfiugi...&quot;
+}
+</code></pre>
+<h2 id="service_registries-getpostputdelete">/service_registries (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_4">Example POST Request</h3>
+<pre><code class="language-url">/service_registries
+</code></pre>
+<h3 id="example-request-body_4">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;type&quot;: &quot;github&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test_user&quot;,
+    &quot;token&quot;: &quot;dnsuibfifgyucgufgu...&quot;
+}
+</code></pre>
+<h2 id="git_credentials-getpostputdelete">/git_credentials (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_5">Example POST Request</h3>
+<pre><code class="language-url">/git_credentials
+</code></pre>
+<h3 id="example-request-body_5">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;type&quot;: &quot;github&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test&quot;,
+    &quot;token&quot;: &quot;bcsuifgsiufgsfiuiu&quot;
+}
+</code></pre>
+<h2 id="services-getpostputdelete">/services (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_6">Example POST Request</h3>
+<pre><code class="language-url">/services
+</code></pre>
+<h3 id="example-request-body_6">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test service&quot;,
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;registry_id&quot;: &quot;628c8dab80b42501489a85da&quot;,
+    &quot;git_credentials_id&quot;: &quot;628c922780b42501489a85dd&quot;,
+    &quot;url&quot;: &quot;http://test_url&quot;,
+    &quot;description&quot;: &quot;A short service description..&quot;,
+    &quot;is_public&quot;: true,
+    &quot;licence&quot;: &quot;test_licence&quot;,
+    &quot;framework&quot;: &quot;java&quot;,
+    &quot;created&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;,
+    &quot;updated&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;
+}
+</code></pre>
+<h2 id="workflows-getpostputdelete">/workflows (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_7">Example POST Request</h3>
+<pre><code class="language-url">/workflows
+</code></pre>
+<h3 id="example-request-body_7">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test service&quot;,
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;git_credentials_id&quot;: &quot;628c922780b42501489a85dd&quot;,
+    &quot;url&quot;: &quot;http://test_url&quot;,
+    &quot;description&quot;: &quot;A short workflow description..&quot;,
+    &quot;is_public&quot;: true,
+    &quot;created&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;,
+    &quot;updated&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;
+}
+</code></pre>
+<h2 id="deployments-getpostputdelete">/deployments (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_8">Example POST Request</h3>
+<pre><code class="language-url">/deployments
+</code></pre>
+<h3 id="example-request-body_8">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test service&quot;,
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;git_credentials_id&quot;: &quot;628c922780b42501489a85dd&quot;,
+    &quot;url&quot;: &quot;http://test_url&quot;,
+    &quot;workflow_id&quot;: &quot;6283ac19189ff14b1516c11c&quot;,
+    &quot;service_id&quot;: &quot;628c928d80b42501489a85de&quot;,
+    &quot;version&quot;: &quot;$deployment_version&quot;,
+    &quot;state&quot;: &quot;$deployment_state&quot;,
+    &quot;created&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;,
+    &quot;updated&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../runtime-monitoring-verification/" class="btn btn-neutral float-left" title="SmartCLIDE-RMV"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../api-gateway/" class="btn btn-neutral float-right" title="API Gateway">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2022 The SmartCLIDE Consortium</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../runtime-monitoring-verification/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../api-gateway/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

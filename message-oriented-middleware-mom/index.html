@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/admin-guide/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://eclipse-researchlabs.github.io/smartclide-docs/message-oriented-middleware-mom/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Admin Guide - SmartCLIDE Docs</title>
+    <title>MOM - SmartCLIDE Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Admin Guide";
-        var mkdocs_page_input_path = "admin-guide.md";
-        var mkdocs_page_url = "/smartclide-docs/admin-guide/";
+        var mkdocs_page_name = "MOM";
+        var mkdocs_page_input_path = "message-oriented-middleware-mom/index.md";
+        var mkdocs_page_url = "/smartclide-docs/message-oriented-middleware-mom/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -55,10 +55,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../user-guide/">User Guide</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Admin Guide</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../admin-guide/">Admin Guide</a>
                 </li>
               </ul>
               <ul>
@@ -136,8 +134,10 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Message-Oriented Middleware (MoM)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../message-oriented-middleware-mom/">MOM</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">MOM</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
       </div>
@@ -153,8 +153,10 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Admin Guide</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Message-Oriented Middleware (MoM) &raquo;</li><li>MOM</li>
     <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/eclipse-researchlabs/smartclide-brokerdocs/*docs/index.md"> Edit on </a>
     </li>
   </ul>
   <hr/>
@@ -163,14 +165,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="smartclide-admin-guide">SmartCLIDE Admin Guide.</h1>
-<p>Under construction...</p>
+                <h1 id="smartclide-broker">smartclide-broker</h1>
+<p>A MOM (Message-orientated Middleware) implementation for the communication of the SmartCLIDE components. <a href="https://www.rabbitmq.com/">RabbitMQ</a> has been selected for the implementation of the message broker and the RabbitMQ server runs inside a Docker container.</p>
+<p>The broker is accessible via two APIs, both implemented in <a href="https://spring.io/projects/spring-boot">Spring Boot</a>.</p>
+<ul>
+<li>
+<p><strong>Websocket API</strong>: a client can send messages to the broker using a websocket connection. MOM uses the <a href="https://www.rabbitmq.com/stomp.html#d">/exchange</a> destination prefix, thus supporting flexible, dynamic routing keys. A client should first establish a connection using the "/websocket" endpoint:</p>
+<p>ws://localhost:8080/websocket</p>
+<p>Then the client can send messages to arbitrary routing keys, e.g.</p>
+<p><code>/exchange/mom/foo.bar.baz</code></p>
+<p>or receive messages by subscribing to arbitrary binding patterns, e.g.</p>
+<p><code>/exchange/mom/foo.bar.*</code></p>
+</li>
+<li>
+<p><strong>REST API</strong>: a client can send messages to a regular REST endpoint using a POST request with the JSON string as payload and the routing key in the path. The REST endpoint will then forward the JSON string directly to the broker using the given routing key:</p>
+<p>E.g.</p>
+<p><code>http://localhost:8080/mom/message/foo.bar.HURZ</code></p>
+</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../user-guide/" class="btn btn-neutral float-left" title="User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../concepts/" class="btn btn-neutral float-right" title="Concepts">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../api-gateway/" class="btn btn-neutral float-left" title="API Gateway"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -194,10 +211,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../user-guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../api-gateway/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../concepts/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

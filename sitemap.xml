@@ -2,87 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/admin-guide/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/concepts/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/getting-started/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/user-guide/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/api-gateway/</loc>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/context-handling/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/database-api/</loc>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/design-patterns/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-researchlabs.github.io/smartclide-docs/message-oriented-middleware-mom/</loc>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/runtime-monitoring-verification/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/service-creation/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/service-creation-testing/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/service-creation-testing-theia/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/service-discovery/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/smart-assistant/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/technical-debt-td-interest/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/technical-debt-td-principal/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/technical-debt-td-reusability-index/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eclipse-researchlabs.github.io/smartclide-docs/technical-debt-td-reusability-index-theia/</loc>
-         <lastmod>2022-07-20</lastmod>
+         <lastmod>2022-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
