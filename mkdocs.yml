@@ -1,36 +1,36 @@
-site_name: SmartCLIDE Docs
+site_name: The SmartCLIDE IDE
 site_url: https://eclipse-researchlabs.github.io/smartclide-docs/
 plugins:
   - search:
   - multirepo:
 nav:
   - Home: 'index.md'
-  - Getting started: 'getting-started.md'
-  - User Guide: 'user-guide.md'
-  - Admin Guide: 'admin-guide.md'
-  - Concepts: 'concepts.md'
-  - Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
-  - Service Creation: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation?branch=main'
-  - Technical Debt (TD) Principal: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Principal?branch=main'
-  - Technical Debt (TD) Interest: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Interest?branch=main'
-  - Technical Debt (TD) Reusability Index: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Index?branch=main'
-  - Technical Debt (TD) Reusability Index (Theia): '!import https://github.com/eclipse-researchlabs/smartclide-td-reusability-theia?branch=main'
-  - Service Creation Testing: '!import https://github.com/eclipse-researchlabs/smartclide-Service-Creation-Testing?branch=main'
-  - Service Creation Testing (Theia): '!import https://github.com/eclipse-researchlabs/smartclide-service-creation-theia?branch=main'
-  - Design Patterns: '!import https://github.com/eclipse-researchlabs/smartclide-design-pattern-selection-theia?branch=main'
-  - Service Discovery: '!import https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc?branch=main'
-  - Smart Assistant: '!import https://github.com/eclipse-researchlabs/smartclide-smart-assistant?branch=main'
-  - Runtime Monitoring & Verification: '!import https://github.com/eclipse-researchlabs/smartclide-RMV?branch=main'
-  - Database API: '!import https://github.com/eclipse-researchlabs/smartclide-db-api?branch=main'
-  - API Gateway: '!import https://github.com/eclipse-researchlabs/smartclide-api-gateway?branch=main'
-  - Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-researchlabs/smartclide-broker?branch=main'
+  - For the developer: 'getting-started-developer.md'
+  - For the sysadmin: 'getting-started-sysadmin.md'
+  
+
+  #- Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
+  #- Service Creation: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation?branch=main'
+  #- Technical Debt (TD) Principal: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Principal?branch=main'
+  #- Technical Debt (TD) Interest: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Interest?branch=main'
+  #- Technical Debt (TD) Reusability Index: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Index?branch=main'
+  #- Technical Debt (TD) Reusability Index (Theia): '!import https://github.com/eclipse-researchlabs/smartclide-td-reusability-theia?branch=main'
+  #- Service Creation Testing: '!import https://github.com/eclipse-researchlabs/smartclide-Service-Creation-Testing?branch=main'
+  #- Service Creation Testing (Theia): '!import https://github.com/eclipse-researchlabs/smartclide-service-creation-theia?branch=main'
+  #- Design Patterns: '!import https://github.com/eclipse-researchlabs/smartclide-design-pattern-selection-theia?branch=main'
+  #- Service Discovery: '!import https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc?branch=main'
+  #- Smart Assistant: '!import https://github.com/eclipse-researchlabs/smartclide-smart-assistant?branch=main'
+  #- Runtime Monitoring & Verification: '!import https://github.com/eclipse-researchlabs/smartclide-RMV?branch=main'
+  #- Database API: '!import https://github.com/eclipse-researchlabs/smartclide-db-api?branch=main'
+  #- API Gateway: '!import https://github.com/eclipse-researchlabs/smartclide-api-gateway?branch=main'
+  #- Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-researchlabs/smartclide-broker?branch=main'
+  
 
   
-theme: readthedocs
+theme: mkdocs
 copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
 
 extra:
   version: v1.0
-  social:
-    - icon: fontawesome/brands/twitter
-    - link: https://twitter.com/squidfunk
+
+footer: ""
