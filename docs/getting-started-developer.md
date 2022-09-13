@@ -46,4 +46,28 @@ This page contains some very-easy-to-follow guides for developers to start build
 
 ## Setting up profile
 
+<div style="text-align: justify;">
+	<p>
+		After landing to the SmartCLIDE Main Page, the developer can edit his profile by clicking the little human icon in the upper right corner, and then clicking on the "My Account" option. By doing this, he is redirected to the SmartCLIDE Profile Editing Page:
+	</p>
+</div>
+
+![The SmartCLIDE Profile Editing Page](img/smartclide-ide-profile-editing-page.png)
+
+<div style="text-align: justify;">
+	<p>
+		From the SmartCLIDE Profile Editing Page the user can edit his security credentials (SmartCLIDE uses <a href="https://www.keycloak.org/">Keycloak</a> for user authentication and authorization), like email, first name, last name and password. In addition, by clicking on the "Credentials" option the user is redirected to a new view where he can add credentials related to source control repositories (e.g., GitHub credentials), CI/CD managers (e.g., Jenkins) and Deployment Platforms.
+	</p>
+</div>
+
+![The SmartCLIDE Credentials Page](img/smartclide-ide-credentials-page.png)
+
+<div style="text-align: justify;">
+	<p>
+		For example, if the user wants to connect his GitHub profile with the SmartCLIDE IDE, he can add his credentials by clicking the '+' icon in the upper right corner, and fill the requested fields in the form that opens (i.e., Type->GitHub, GitHub URL, username and GitHub Personal Access Token). 
+	</p>
+</div>
+
+![The SmartCLIDE Git Page](img/smartclide-ide-git-page.png)
+
 ## Building the first service
