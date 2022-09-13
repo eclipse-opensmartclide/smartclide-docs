@@ -1,5 +1,5 @@
 ## Welcome to the SmartCLIDE IDE
-<div style="text-align: left;">
+<div style="text-align: justify;">
 	<p>
 		The SmartCLIDE project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 871177.
 	</p>
@@ -16,7 +16,11 @@
 	</p>
 </div>
 
-SmartCLIDE will provide several categories of abstractions:
+<div style="text-align: justify;">
+	<p>
+		SmartCLIDE will provide several categories of abstractions:
+	</p>
+</div>
 
 * at development stage, SmartCLIDE will provide abstractions on data transformations or processing
 * at testing stage, mechanisms to visualize flow and status or artifacts to automatically test the expected behavior
