@@ -15,4 +15,4 @@
 
 * Install and deploy a Kubernetes cluster (<a href="https://kubernetes.io/docs/setup/">read more</a>)
 * Install Helm (<a href="https://helm.sh/docs/intro/install/">read more</a>)
-* Eclipse Che locally (<a href="https://www.eclipse.org/che/docs/stable/administration-guide/installing-che-locally/">read more</a>)
+* Install Eclipse Che (<a href="https://www.eclipse.org/che/docs/stable/administration-guide/installing-che-locally/">read more</a>)
