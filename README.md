@@ -49,4 +49,4 @@ The SmartCLIDE Consortium consists of the following partners:
 
 ## License
 
-Distributed under the Eclipse Public License 2.0. See [LICENSE](https://github.com/eclipse-researchlabs/smartclide-docs/blob/master/LICENSE) for more information.
+Distributed under the Eclipse Public License 2.0. See [LICENSE](https://github.com/eclipse-opensmartclide/smartclide-docs/blob/master/LICENSE) for more information.
