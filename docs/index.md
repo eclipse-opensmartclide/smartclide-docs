@@ -78,6 +78,6 @@
 ### License
 <div style="text-align: justify;">
 	<p>
-		Distributed under the Eclipse Public License 2.0. See <a href="https://github.com/eclipse-researchlabs/smartclide-docs/blob/master/LICENSE">LICENSE</a> for more information.
+		Distributed under the Eclipse Public License 2.0. See <a href="https://github.com/eclipse-opensmartclide/smartclide-docs/blob/master/LICENSE">LICENSE</a> for more information.
 	</p>
 </div>

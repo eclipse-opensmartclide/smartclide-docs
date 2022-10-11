@@ -1,5 +1,5 @@
 site_name: The SmartCLIDE IDE
-site_url: https://eclipse-researchlabs.github.io/smartclide-docs/
+site_url: https://eclipse-opensmartclide.github.io/smartclide-docs/
 plugins:
   - search:
   - multirepo:
@@ -9,21 +9,21 @@ nav:
   - For the sysadmin: 'getting-started-sysadmin.md'
   
 
-  #- Context Handling: '!import https://github.com/eclipse-researchlabs/smartclide-context?branch=main'
-  #- Service Creation: '!import https://github.com/eclipse-researchlabs/smartclide-service-creation?branch=main'
-  #- Technical Debt (TD) Principal: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Principal?branch=main'
-  #- Technical Debt (TD) Interest: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Interest?branch=main'
-  #- Technical Debt (TD) Reusability Index: '!import https://github.com/eclipse-researchlabs/smartclide-TD-Reusability-Index?branch=main'
-  #- Technical Debt (TD) Reusability Index (Theia): '!import https://github.com/eclipse-researchlabs/smartclide-td-reusability-theia?branch=main'
-  #- Service Creation Testing: '!import https://github.com/eclipse-researchlabs/smartclide-Service-Creation-Testing?branch=main'
-  #- Service Creation Testing (Theia): '!import https://github.com/eclipse-researchlabs/smartclide-service-creation-theia?branch=main'
-  #- Design Patterns: '!import https://github.com/eclipse-researchlabs/smartclide-design-pattern-selection-theia?branch=main'
-  #- Service Discovery: '!import https://github.com/eclipse-researchlabs/smartclide-service-discovery-poc?branch=main'
-  #- Smart Assistant: '!import https://github.com/eclipse-researchlabs/smartclide-smart-assistant?branch=main'
-  #- Runtime Monitoring & Verification: '!import https://github.com/eclipse-researchlabs/smartclide-RMV?branch=main'
-  #- Database API: '!import https://github.com/eclipse-researchlabs/smartclide-db-api?branch=main'
-  #- API Gateway: '!import https://github.com/eclipse-researchlabs/smartclide-api-gateway?branch=main'
-  #- Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-researchlabs/smartclide-broker?branch=main'
+  #- Context Handling: '!import https://github.com/eclipse-opensmartclide/smartclide-context?branch=main'
+  #- Service Creation: '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation?branch=main'
+  #- Technical Debt (TD) Principal: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Principal?branch=main'
+  #- Technical Debt (TD) Interest: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Interest?branch=main'
+  #- Technical Debt (TD) Reusability Index: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Reusability-Index?branch=main'
+  #- Technical Debt (TD) Reusability Index (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-td-reusability-theia?branch=main'
+  #- Service Creation Testing: '!import https://github.com/eclipse-opensmartclide/smartclide-Service-Creation-Testing?branch=main'
+  #- Service Creation Testing (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation-theia?branch=main'
+  #- Design Patterns: '!import https://github.com/eclipse-opensmartclide/smartclide-design-pattern-selection-theia?branch=main'
+  #- Service Discovery: '!import https://github.com/eclipse-opensmartclide/smartclide-service-discovery-poc?branch=main'
+  #- Smart Assistant: '!import https://github.com/eclipse-opensmartclide/smartclide-smart-assistant?branch=main'
+  #- Runtime Monitoring & Verification: '!import https://github.com/eclipse-opensmartclide/smartclide-RMV?branch=main'
+  #- Database API: '!import https://github.com/eclipse-opensmartclide/smartclide-db-api?branch=main'
+  #- API Gateway: '!import https://github.com/eclipse-opensmartclide/smartclide-api-gateway?branch=main'
+  #- Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-opensmartclide/smartclide-broker?branch=main'
   
 
   
