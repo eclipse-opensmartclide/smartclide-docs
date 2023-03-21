@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/admin-guide/">
+        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/workflows/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>SmartCLIDE Admin Guide. - The SmartCLIDE IDE</title>
+        <title>Getting Started - The SmartCLIDE IDE</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">For the developer <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -49,15 +49,15 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../workflows/" class="dropdown-item">Getting Started</a>
+    <a href="./" class="dropdown-item active">Getting Started</a>
 </li>
             
 <li>
-    <a href="../workflows/example1/" class="dropdown-item">Example 1</a>
+    <a href="example1/" class="dropdown-item">Example 1</a>
 </li>
             
 <li>
-    <a href="../workflows/example2/" class="dropdown-item">Example 2</a>
+    <a href="example2/" class="dropdown-item">Example 2</a>
 </li>
     </ul>
   </li>
@@ -74,6 +74,19 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../getting-started-developer/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="example1/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eclipse-opensmartclide/kie-wb-commondocs/*docs/index.md" class="nav-link">Edit on </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -92,8 +105,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#smartclide-admin-guide" class="nav-link">SmartCLIDE Admin Guide.</a>
+            <li class="nav-item" data-level="1"><a href="#getting-started-with-workflows" class="nav-link">Getting started with Workflows</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#bpmn-with-smartclide" class="nav-link">BPMN with SmartCLIDE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#main-smartclide-additions" class="nav-link">Main SmartCLIDE Additions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -101,8 +122,35 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="smartclide-admin-guide">SmartCLIDE Admin Guide.</h1>
-<p>Under construction...</p></div>
+<h1 id="getting-started-with-workflows">Getting started with Workflows</h1>
+<p>In order to start creating your own workflows, you should head to the "Workflows" section from the left side of the SmarCLIDE IDE.
+Once the page loads you will be able to see the jBPM instance inside the IDE, just like the following figure.</p>
+<p><img alt="img.png" src="images/img_init.png" /></p>
+<p>From here you can select the:
+- "Design" in order to start creating and editing your BMPN diagrams/
+- "Deploy" in order to see the deployment units.
+- "Manage" in order to manage the process instances, tasks, or jobs.
+- "Track" in order to see metrics and reports regarding your workflows.</p>
+<h2 id="bpmn-with-smartclide">BPMN with SmartCLIDE</h2>
+<p>By selecting "Design" you are able to see your spaces, projects, and assets.
+You can open/create a project and from there you can add different kind of Assets.</p>
+<p><img alt="img.png" src="images/img_assets.png" /></p>
+<p>By selecting the "Business Process" asset, you will be promoted to add a name for this workflow, and after that an editor is going to open.</p>
+<p><img alt="img.png" src="images/img_editor_1.png" /></p>
+<p>From here you will be able to start creating your BPMN diagrams.
+The jBPM environment offers a lot of different nodes that can be added in the workflow, by simply drag and drop.
+All these nodes exist on the left side of the editor.</p>
+<h2 id="main-smartclide-additions">Main SmartCLIDE Additions</h2>
+<p>The main addition of SmartCLIDE is in the assignments section of each Rest Task, which looks like this.</p>
+<p><img alt="img_1.png" src="images/img_assigments.png" /></p>
+<p>As SmartCLIDE wants help the reuse of existing service, the "SmartCLIDE Service Discovery" section exist.
+If the User provided a descriptive Task Name and Description, by simply selecting the "Search" button is able to get the appropriate results.
+After that the user is able to select "Fetch Code", in order to get the according code in a Theia workspace in order to start the development process.</p>
+<p><img alt="img_1.png" src="images/img_search.png" /></p>
+<p>In case the user wasn't able to find a suitable existing service they can use the "Service Creation", in order to easily create a new one.</p>
+<p>Moreover, another addition of SmartCLIDE is regarding the Technical Debt (TD) of the workflow.
+In order to get the TD of the workflow, you have to navigate to the "Documentation" Tab of the workflow, and from there you select the "Calculate TD".</p>
+<p><img alt="img.png" src="images/img_TD.png" /></p></div>
             </div>
         </div>
 

@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/admin-guide/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>SmartCLIDE Admin Guide. - The SmartCLIDE IDE</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/workflows/example1/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Example 1 - The SmartCLIDE IDE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">The SmartCLIDE IDE</a>
+                <a class="navbar-brand" href="../..">The SmartCLIDE IDE</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,14 +34,14 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">For the developer <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../getting-started-developer/" class="dropdown-item">Getting Started</a>
+    <a href="../../getting-started-developer/" class="dropdown-item">Getting Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -49,22 +49,22 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../workflows/" class="dropdown-item">Getting Started</a>
+    <a href="../" class="dropdown-item">Getting Started</a>
 </li>
             
 <li>
-    <a href="../workflows/example1/" class="dropdown-item">Example 1</a>
+    <a href="./" class="dropdown-item active">Example 1</a>
 </li>
             
 <li>
-    <a href="../workflows/example2/" class="dropdown-item">Example 2</a>
+    <a href="../example2/" class="dropdown-item">Example 2</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="../getting-started-sysadmin/" class="nav-link">For the sysadmin</a>
+                                <a href="../../getting-started-sysadmin/" class="nav-link">For the sysadmin</a>
                             </li>
                         </ul>
 
@@ -74,6 +74,19 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../example2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eclipse-opensmartclide/kie-wb-commondocs/*docs/example1.md" class="nav-link">Edit on </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -92,7 +105,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#smartclide-admin-guide" class="nav-link">SmartCLIDE Admin Guide.</a>
+            <li class="nav-item" data-level="2"><a href="#example-1" class="nav-link">Example 1</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -101,8 +114,69 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="smartclide-admin-guide">SmartCLIDE Admin Guide.</h1>
-<p>Under construction...</p></div>
+<h2 id="example-1">Example 1</h2>
+<ul>
+<li>
+<h5 id="design">Design</h5>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Start Node</th>
+<th align="center">End Node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img.png" src="../images/img_start_node.png" /></td>
+<td align="center"><img alt="img.png" src="../images/img_end_node.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>These first Nodes are necessary in order to provide the start and end of your workflow.
+Moreover, for this example we are going to make a Rest API call, so we need to add a Rest node as well.</p>
+<p><img alt="img.png" src="../images/img_rest_node.png" /></p>
+<p>After having all the nodes in the editor we can start making the appropriate connections.
+By selecting a node a lot of different options appear and from there you can select the arrow in order to connect this node with another one.
+For this example that we want to make only one API call we have the following simple BPMN diagram.</p>
+<p><img alt="img.png" src="../images/img_workflow_1.png" /></p>
+<p>In order to configure our Rest node in order to make the call to the API that we want, we can select it and change anything that we want from the right side of the editor.
+The majority of the configuration exist inside the Data Assignments section.
+By selecting the Assignments we are able to see and edit all the information regarding the Rest API call.</p>
+<p>In the "Data Inputs and Assignments" section we can change for example
+- The "Url" to "https://reqres.in/api/users"
+- The "Method" to "GET"</p>
+<p>In the "Data Outputs and Assignments" section we can make configurations regarding the output of the node.
+In order to send the result of the call to the next node. But for this example we are not going to change anything.</p>
+<p>In the "SmartCLIDE service discovery" section you can search for existing service, provided that you have a descriptive node Name, and Description.</p>
+<p>If you don't find any appropriate service in the previous search you can use the "SmartCLIDE service creation".
+That redirects you in the service creation page of SmartCLIDE.</p>
+<p>Finally, the assignments are going to look like this:</p>
+<p><img alt="img_1.png" src="../images/img_assigments.png" /></p>
+<ul>
+<li>
+<h5 id="deploy">Deploy</h5>
+After the Design of the workflow, you can go ahead and select "Save".
+It's the first button in the top bar above the editor.
+Now by going back to the project (by selecting the name of the project from the top)</li>
+</ul>
+<p><img alt="img.png" src="../images/img_save_project.png" /></p>
+<p>From here you have to add to install the Rest Task to your project since it not in the main components of jBPM.
+You have to navigate to the "Settings" tab and from there select the "Custom Tasks" from the left side, and finally select "Install" for th Rest task.</p>
+<p><img alt="img.png" src="../images/img_install_rest.png" /></p>
+<p>So by navigating once again in the Assets Tab, you can see the Rest Asset as well.
+And by selecting the "Deploy" button from the top right, the project is being build and deployed.</p>
+<p>So now that our project is deployed if we want to create a process instance of our workflow, we navigate from the top menu to the "Process Definitions".</p>
+<p><img alt="img.png" src="../images/img_toPD.png" /></p>
+<p>From here you are able to see all the processes, and you can start a new instance like this:</p>
+<p><img alt="img.png" src="../images/img_PD_start.png" /></p>
+<p>Now we can navigate to the Manage of "Process Instances" like this:</p>
+<p><img alt="img.png" src="../images/img_toPI.png" /></p>
+<p>From here we see all the Process Instances that are active or have finished.
+We can see that our Process Instance is finished since it had to do only an API call.
+And if we select it, we can see more information about it.</p>
+<p><img alt="img.png" src="../images/img_PI_info.png" /></p></div>
             </div>
         </div>
 
@@ -112,11 +186,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
