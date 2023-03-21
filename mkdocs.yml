@@ -5,7 +5,9 @@ plugins:
   - multirepo:
 nav:
   - Home: 'index.md'
-  - For the developer: 'getting-started-developer.md'
+  - For the developer:
+    - Getting Started: 'getting-started-developer.md'
+    - Workflows: '!import https://github.com/eclipse-opensmartclide/kie-wb-common?branch=SmartCLIDE-addons'
   - For the sysadmin: 'getting-started-sysadmin.md'
   
 
