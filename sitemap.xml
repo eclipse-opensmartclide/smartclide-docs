@@ -30,4 +30,19 @@
          <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://eclipse-opensmartclide.github.io/smartclide-docs/workflows/</loc>
+         <lastmod>2023-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-opensmartclide.github.io/smartclide-docs/workflows/example1/</loc>
+         <lastmod>2023-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eclipse-opensmartclide.github.io/smartclide-docs/workflows/example2/</loc>
+         <lastmod>2023-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
