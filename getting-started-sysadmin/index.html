@@ -43,24 +43,6 @@
 <li>
     <a href="../getting-started-developer/" class="dropdown-item">Getting Started</a>
 </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Workflows</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../workflows/" class="dropdown-item">Getting Started</a>
-</li>
-            
-<li>
-    <a href="../workflows/example1/" class="dropdown-item">Example 1</a>
-</li>
-            
-<li>
-    <a href="../workflows/example2/" class="dropdown-item">Example 2</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="navitem active">
@@ -75,7 +57,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../workflows/example2/" class="nav-link">
+                                <a rel="prev" href="../getting-started-developer/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -104,7 +86,7 @@
             
             <li class="nav-item" data-level="1"><a href="#for-the-sysadmin" class="nav-link">For the sysadmin</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#requirements" class="nav-link">Requirements</a>
+            <li class="nav-item" data-level="2"><a href="#smartclide-helm-chart" class="nav-link">SmartCLIDE Helm Chart</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -122,18 +104,188 @@
     </p>
 </div>
 
-<h2 id="requirements">Requirements</h2>
-<div style="text-align: justify;">
-    <p>
-        To deploy a SmartCLIDE IDE instance on-premises environment, the following are required:
-    </p>
-</div>
-
+<h2 id="smartclide-helm-chart">SmartCLIDE Helm Chart</h2>
+<h3 id="requirements">Requirements</h3>
 <ul>
-<li>Install and deploy a Kubernetes cluster (<a href="https://kubernetes.io/docs/setup/">read more</a>)</li>
-<li>Install Helm (<a href="https://helm.sh/docs/intro/install/">read more</a>)</li>
-<li>Install Eclipse Che (<a href="https://www.eclipse.org/che/docs/stable/administration-guide/installing-che-locally/">read more</a>)</li>
-</ul></div>
+<li>A publicly resolvable domain, like <code>example.org</code> or a subdomain like <code>foo.example.org</code>.</li>
+</ul>
+<p>You <strong>must</strong> be able to edit DNS records for that domain.</p>
+<ul>
+<li>A wildcard TLS certificate for your domain, i.e. for <code>*.example.org</code> or <code>*.foo.example.org</code>.</li>
+</ul>
+<p>It <strong>must</strong> be a wildcard certificate! Letsencrypt is <strong>not</strong> supported at the moment!
+  Save the certificate files in <code>smartclide.full-chain.crt</code> and <code>smartclide.key</code>.</p>
+<p><code>smartclide.full-chain.crt</code> <strong>must</strong> contain the full certificate chain, including intermediate certificates.</p>
+<ul>
+<li>An SMTP server</li>
+<li>A GitLab instance or an account on gitlab.com</li>
+<li>A GitHub account</li>
+<li>A <a href="https://kubernetes.io/">kubernetes</a> cluster (version 1.21+) with</li>
+<li>Ingress Controller</li>
+<li>Dynamic Volume Provisioning</li>
+<li><a href="https://kubernetes.io/docs/tasks/tools/#kubectl">kubectl</a> installed and configured for your cluster</li>
+<li><a href="https://helm.sh/">helm</a> installed and configured for your cluster</li>
+</ul>
+<p><strong>Disclaimer:</strong> the above tools can be installed on both Linux and Windows.
+However, the following instructions have only been tested on Linux.</p>
+<h3 id="prepare">Prepare</h3>
+<h4 id="dns">DNS</h4>
+<p>Create a <code>CNAME</code> record for <code>*.&lt;YOUR_DOMAIN&gt;</code> - e.g. <code>*.example.org</code> - and set the target to the output of:</p>
+<pre><code class="language-shell">kubectl get services --namespace ingress-nginx -o jsonpath=&quot;{.items[].status.loadBalancer.ingress[0].hostname}&quot;
+</code></pre>
+<p>Replace <code>ingress-nginx</code> with the namespace where your ingress controller is installed.</p>
+<h4 id="eclipse-che">Eclipse Che</h4>
+<h5 id="install-chectl">Install chectl</h5>
+<ul>
+<li>Download <code>chectl</code> version <strong><code>7.38.0</code></strong> for your operating system
+  from the <a href="https://github.com/che-incubator/chectl/releases/tag/7.38.0">chectl release page</a>, e.g. <code>chectl-linux-x64.tar.gz</code>.</li>
+<li>Unpack it to your <code>HOME</code> folder:</li>
+</ul>
+<p><code>shell
+  tar -xvz -C ${HOME} -f chectl-linux-x64.tar.gz</code></p>
+<ul>
+<li>Create an alias for the chectl command:</li>
+</ul>
+<p><code>shell
+  chectl=${HOME}/chectl/bin/run</code></p>
+<h5 id="namespace">Namespace</h5>
+<p>Create the namespace for Eclipse Che:</p>
+<pre><code class="language-shell">kubectl create namespace eclipse-che
+</code></pre>
+<h5 id="certificate">Certificate</h5>
+<p>Create the TLS certificate secret for Eclipse Che:</p>
+<pre><code class="language-shell">kubectl create secret tls che-tls \
+  --namespace eclipse-che \
+  --cert=smartclide.full-chain.crt \
+  --key=smartclide.key
+</code></pre>
+<h5 id="deploy-eclipse-che">Deploy Eclipse Che</h5>
+<ol>
+<li>Configure deployment scripts. Run:</li>
+</ol>
+<p><code>shell
+   sed -i s/"{THE_DOMAIN}"/"&lt;YOUR_DOMAIN&gt;"/g che/*.{yaml,json}</code></p>
+<p>Replace <code>&lt;YOUR_DOMAIN&gt;</code> with your domain, e.g. <code>example.org</code>.</p>
+<ol>
+<li>Create initial deployment. Run:</li>
+</ol>
+<p><code>shell
+   chectl server:deploy \
+      --installer=helm \
+      --platform=k8s \
+      --chenamespace=eclipse-che \
+      --domain=&lt;YOUR_DOMAIN&gt; \
+      --telemetry=off \
+      --no-auto-update \
+      --multiuser \
+      --helm-patch-yaml=che/my-values.yaml</code></p>
+<p>Replace <code>&lt;YOUR_DOMAIN&gt;</code> with your domain, e.g. <code>example.org</code>.</p>
+<p>Answer with <code>n</code> ("no") when asked <code>Do you want to update chectl now? [y/n]:</code>.</p>
+<p>Answer with <code>y</code> ("yes") when asked <code>'helm' installer is deprecated. Do you want to proceed? [y/n]:</code>.</p>
+<p>The command will take a while. At the end you should see a message like:</p>
+<p>```shell
+       ✔ Eclipse Che 7.38.0 has been successfully deployed.
+       ✔ Documentation             : https://www.eclipse.org/che/docs/
+       ✔</p>
+<hr />
+<pre><code>   ✔ Users Dashboard           : https://che.example.org
+   ✔ Admin user login          : "admin:admin". NOTE: must change after first login.
+   ✔
+</code></pre>
+<hr />
+<pre><code>   ✔ Plug-in Registry          : https://plugin-registry-eclipse-che.example.org/v3/
+   ✔ Devfile Registry          : https://devfile-registry-eclipse-che.example.org/
+   ✔
+</code></pre>
+<hr />
+<pre><code>   ✔ Identity Provider URL     : https://keycloak-eclipse-che.example.org/auth/
+   ✔ Identity Provider login   : "admin:s3cr3t".
+   ✔
+</code></pre>
+<hr />
+<p>Command server:deploy has completed successfully in 02:34.
+   ```</p>
+<ol>
+<li>Update Eclipse Che configuration. Run:</li>
+</ol>
+<p>```shell
+   kubectl patch configmaps --namespace eclipse-che che --patch "$(cat che/config-patch.yaml)" -o yaml</p>
+<p>for theIngress in che-ingress che-dashboard-ingress devfile-registry plugin-registry keycloak-ingress
+   do
+     kubectl patch ingress --namespace eclipse-che ${theIngress} --patch "$(cat che/ingress-patch.yaml)" -o yaml
+   done</p>
+<p>kubectl --namespace eclipse-che rollout restart deployment/che
+   ```</p>
+<ol>
+<li>
+<p>Open Che Users Dashboard <code>https://che.&lt;YOUR_DOMAIN&gt;</code>, e.g. <code>https://che.example.org</code>, in your browser, and login with the
+   admin username and password provided in the output of <code>chectl server:deploy</code> command above.
+   Change the default admin password to a secure password!</p>
+</li>
+<li>
+<p>Open keycloak admin interface <code>https://keycloak-eclipse-che.&lt;YOUR_DOMAIN&gt;/auth/admin/</code>,
+   e.g. <code>https://keycloak-eclipse-che.example.org/auth/admin/</code>, in your browser, and login with the keycloak admin username and
+   password provided in the output of <code>chectl server:deploy</code> command above.</p>
+</li>
+<li>
+<p>Make sure that the realm <code>Che</code> is selected at the top of the left-hand menu.</p>
+</li>
+<li>Under the menu section <code>Manage</code>, click on <code>Import</code> and select <a href="che/realm-patch.json">che/realm-patch.json</a>.
+     Make sure that <code>Import clients</code> and <code>Import realm roles</code> is <code>ON</code>. Click <code>Import</code>.
+     You should see a notification that 12 records have been added.</li>
+<li>Under the menu section <code>Configure</code>, click on <code>Realm Settings</code>, then click on the tab <code>Login</code> and change <code>Require SSL</code>
+     to <code>external requests</code>. Click <code>Save</code>.</li>
+<li>Click on the tab <code>Email</code> and fill in the values for your SMTP server, so that keycloak can send passwort reset emails.
+     Click <code>Save</code>.</li>
+<li>
+<p>Under the menu section <code>Configure</code>, click on <code>Roles</code> and the tab <code>Default Roles</code>. In the <code>Available Roles</code> box, select</p>
+<ul>
+<li>developer</li>
+<li>kie-sever</li>
+<li>rest-all</li>
+<li>user</li>
+</ul>
+<p>Click <code>Add selected</code>.</p>
+</li>
+<li>
+<p>Under the menu section <code>Configure</code>, click on <code>Clients</code>, and select <code>business-central</code>. Click on the tab <code>Credentials</code> and
+     then on <code>Regenerate Secret</code>. Note down the new secret.</p>
+<p>Repeat this for the client <code>kie-server</code>.</p>
+</li>
+</ol>
+<h4 id="dedicated-node-group-for-dle">Dedicated Node Group for DLE</h4>
+<p>The DLE component requires more resources than other SmartCLIDE components.
+The minimum requirements are <em>4 CPUs</em> and <em>16 GiB RAM</em>.
+It is therefore recommended to create a dedicated node group for the DLE with at least 1 node of the required minimum size.</p>
+<p>Add the following <code>label</code> and <code>taint</code> to the node group / <strong>all</strong> nodes in the node group:</p>
+<pre><code class="language-yaml">labels:
+  smartclide-nodegroup-type: &quot;dle&quot;
+</code></pre>
+<pre><code class="language-yaml">taints:
+  - key: &quot;dle&quot;
+    value: &quot;true&quot;
+    effect: &quot;NoSchedule&quot;
+</code></pre>
+<h4 id="settings">Settings</h4>
+<p>Open <a href="my-values.yaml">my-values.yml</a> in a text editor and change the values according to your needs.
+See the comments in the file for more information.</p>
+<h4 id="namespace_1">Namespace</h4>
+<p>Create the namespace:</p>
+<pre><code class="language-shell">kubectl create namespace smartclide
+</code></pre>
+<h4 id="certificate_1">Certificate</h4>
+<p>Create the TLS certificate secret:</p>
+<pre><code class="language-shell">kubectl create secret tls smartclide-tls \
+  --namespace smartclide \
+  --cert=smartclide.full-chain.crt \
+  --key=smartclide.key
+</code></pre>
+<h3 id="install-upgrade">Install / Upgrade</h3>
+<pre><code class="language-shell">helm upgrade --install --namespace smartclide --values my-values.yaml smartclide helm-chart
+</code></pre>
+<h3 id="uninstall">Uninstall</h3>
+<pre><code class="language-shell">helm uninstall --namespace smartclide smartclide
+</code></pre></div>
             </div>
         </div>
 
