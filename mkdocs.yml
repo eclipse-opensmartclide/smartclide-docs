@@ -7,27 +7,29 @@ nav:
   - Home: 'index.md'
   - For the developer:
     - Getting Started: 'getting-started-developer.md'
+    - Service Discovery: '!import https://github.com/eclipse-opensmartclide/smartclide-service-discovery-poc?branch=main'
     - Workflows: '!import https://github.com/eclipse-opensmartclide/kie-wb-common?branch=SmartCLIDE-addons'
+    - Service Creation: 
+        - Service Creation: '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation?branch=main'
+        - Service Creation Testing: '!import https://github.com/eclipse-opensmartclide/smartclide-Service-Creation-Testing?branch=main'
+        - Service Creation Testing (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation-theia?branch=main'
+        - Design Patterns: '!import https://github.com/eclipse-opensmartclide/smartclide-design-pattern-selection-theia?branch=main'
+    - Service Maintenance:
+        - Technical Debt (TD) Principal: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Principal?branch=main'
+        - Technical Debt (TD) Interest: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Interest?branch=main'
+        - Technical Debt (TD) Reusability Index: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Reusability-Index?branch=main'
+        - Technical Debt (TD) Reusability Index (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-td-reusability-theia?branch=main'
+    - Runtime Monitoring & Verification: '!import https://github.com/eclipse-opensmartclide/smartclide-RMV?branch=main'
+    - Context Handling: '!import https://github.com/eclipse-opensmartclide/smartclide-context?branch=main'
+    - Smart Assistant: '!import https://github.com/eclipse-opensmartclide/smartclide-smart-assistant?branch=main'
+    - Security:
+        - Security-related Static Analysis: '!import https://github.com/eclipse-opensmartclide/smartclide-security?branch=main'
+        - Security Patterns: '!import https://github.com/eclipse-opensmartclide/smartclide-security-patterns?branch=main'
+    - Inter-process Communication:
+        - Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-opensmartclide/smartclide-broker?branch=main'
+        - API Gateway: '!import https://github.com/eclipse-opensmartclide/smartclide-api-gateway?branch=main'
+        - Database API: '!import https://github.com/eclipse-opensmartclide/smartclide-db-api?branch=main'
   - For the sysadmin: 'getting-started-sysadmin.md'
-  
-
-  #- Context Handling: '!import https://github.com/eclipse-opensmartclide/smartclide-context?branch=main'
-  #- Service Creation: '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation?branch=main'
-  #- Technical Debt (TD) Principal: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Principal?branch=main'
-  #- Technical Debt (TD) Interest: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Interest?branch=main'
-  #- Technical Debt (TD) Reusability Index: '!import https://github.com/eclipse-opensmartclide/smartclide-TD-Reusability-Index?branch=main'
-  #- Technical Debt (TD) Reusability Index (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-td-reusability-theia?branch=main'
-  #- Service Creation Testing: '!import https://github.com/eclipse-opensmartclide/smartclide-Service-Creation-Testing?branch=main'
-  #- Service Creation Testing (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation-theia?branch=main'
-  #- Design Patterns: '!import https://github.com/eclipse-opensmartclide/smartclide-design-pattern-selection-theia?branch=main'
-  #- Service Discovery: '!import https://github.com/eclipse-opensmartclide/smartclide-service-discovery-poc?branch=main'
-  #- Smart Assistant: '!import https://github.com/eclipse-opensmartclide/smartclide-smart-assistant?branch=main'
-  #- Runtime Monitoring & Verification: '!import https://github.com/eclipse-opensmartclide/smartclide-RMV?branch=main'
-  #- Database API: '!import https://github.com/eclipse-opensmartclide/smartclide-db-api?branch=main'
-  #- API Gateway: '!import https://github.com/eclipse-opensmartclide/smartclide-api-gateway?branch=main'
-  #- Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-opensmartclide/smartclide-broker?branch=main'
-  
-
   
 theme: mkdocs
 copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
