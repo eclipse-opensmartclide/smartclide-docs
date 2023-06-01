@@ -1,4 +1,4 @@
-site_name: The SmartCLIDE IDE
+site_name: The OpenSmartCLIDE IDE
 site_url: https://eclipse-opensmartclide.github.io/smartclide-docs/
 plugins:
   - search:
@@ -7,9 +7,11 @@ nav:
   - Home: 'index.md'
   - For the developer:
     - Getting Started: 'getting-started-developer.md'
+  - For the sysadmin: 'getting-started-sysadmin.md'
+  - Building OpenSmartCLIDE:
     - Service Discovery: '!import https://github.com/eclipse-opensmartclide/smartclide-service-discovery-poc?branch=main'
     - Workflows: '!import https://github.com/eclipse-opensmartclide/kie-wb-common?branch=SmartCLIDE-addons'
-    - Service Creation: 
+    - Service Creation:
         - Service Creation: '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation?branch=main'
         - Service Creation Testing: '!import https://github.com/eclipse-opensmartclide/smartclide-Service-Creation-Testing?branch=main'
         - Service Creation Testing (Theia): '!import https://github.com/eclipse-opensmartclide/smartclide-service-creation-theia?branch=main'
@@ -29,10 +31,9 @@ nav:
         - Message-Oriented Middleware (MoM): '!import https://github.com/eclipse-opensmartclide/smartclide-broker?branch=main'
         - API Gateway: '!import https://github.com/eclipse-opensmartclide/smartclide-api-gateway?branch=main'
         - Database API: '!import https://github.com/eclipse-opensmartclide/smartclide-db-api?branch=main'
-  - For the sysadmin: 'getting-started-sysadmin.md'
-  
+
 theme: mkdocs
-copyright: Copyright &copy; 2022 The SmartCLIDE Consortium
+copyright: Copyright &copy; 2023 The SmartCLIDE Consortium
 
 extra:
   version: v1.0
