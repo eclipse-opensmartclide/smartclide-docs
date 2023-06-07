@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/getting-started-developer/">
+        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/context-handling/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Getting Started - The OpenSmartCLIDE IDE</title>
+        <title>Context Handling - The OpenSmartCLIDE IDE</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -36,12 +36,12 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">For the developer <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Getting Started</a>
+    <a href="../getting-started-developer/" class="dropdown-item">Getting Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -66,7 +66,7 @@
                             <li class="navitem">
                                 <a href="../getting-started-sysadmin/" class="nav-link">For the sysadmin</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Building OpenSmartCLIDE <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -187,7 +187,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../context-handling/" class="dropdown-item">Context Handling</a>
+    <a href="./" class="dropdown-item active">Context Handling</a>
 </li>
     </ul>
   </li>
@@ -274,14 +274,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../runtime-monitoring-verification/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../workflows/" class="nav-link">
+                                <a rel="next" href="../smart-assistant/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eclipse-opensmartclide/smartclide-contextdocs/*docs/index.md" class="nav-link">Edit on </a>
                             </li>
                     </ul>
                 </div>
@@ -301,17 +304,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#for-the-developer" class="nav-link">For the developer</a>
+            <li class="nav-item" data-level="1"><a href="#smartclide-context" class="nav-link">smartclide-context</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#registration-and-login" class="nav-link">Registration and login</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#setting-up-profile" class="nav-link">Setting up profile</a>
+            <li class="nav-item" data-level="2"><a href="#preconditions-to-build-and-run-context-handling" class="nav-link">Preconditions to build and run Context Handling</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#building-the-first-service" class="nav-link">Building the first service</a>
+            <li class="nav-item" data-level="2"><a href="#how-to-build-context-handling" class="nav-link">How to build Context Handling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#how-to-run-context-handling" class="nav-link">How to run Context Handling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#how-to-configure-context-handling" class="nav-link">How to configure Context Handling</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -322,67 +329,114 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="for-the-developer">For the developer</h1>
-<p>This page contains some very-easy-to-follow guides for developers to start building services using the SmartCLIDE IDE.</p>
-<h2 id="registration-and-login">Registration and login</h2>
-<div style="text-align: justify;">
-    <p>
-        The first thing a developer needs to do in order to start using the SmartCLIDE IDE, is to navigate to the <a href="https://ide.che.smartclide.eu/">SmartCLIDE IDE landing page</a>:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Landing Page" src="../img/smartclide-ide-landing-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        Then, by hitting the 'SmartCLIDE Eclipse Che' button, the user is redirected to the SmartCLIDE Login Page:  
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Login Page" src="../img/smartclide-ide-login-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        From there, the developer hits the "Register" button, and is redirected to the SmartCLIDE IDE Registration Page:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Registration Page" src="../img/smartclide-ide-registration-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        After the developer has filled in his details, a verification link is sent through email to the email account that he provided, and the following page is presented to the user:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Email Verification Page" src="../img/smartclide-ide-email-verification-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        The user clicks the verification link sent to him in order to verify his account. Then, he can navigate back to the SmartCLIDE Login Page, enter his credentials and log into the SmartCLIDE IDE. After that, the SmartCLIDE Main Page is presented to the user:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Main Page" src="../img/smartclide-ide-main-page.png" /></p>
-<h2 id="setting-up-profile">Setting up profile</h2>
-<div style="text-align: justify;">
-    <p>
-        After landing to the SmartCLIDE Main Page, the developer can edit his profile by clicking the little human icon in the upper right corner, and then clicking on the "My Account" option. By doing this, he is redirected to the SmartCLIDE Profile Editing Page:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Profile Editing Page" src="../img/smartclide-ide-profile-editing-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        From the SmartCLIDE Profile Editing Page the user can edit his security credentials (SmartCLIDE uses <a href="https://www.keycloak.org/">Keycloak</a> for user authentication and authorization), like email, first name, last name and password. In addition, by clicking on the "Credentials" option the user is redirected to a new view where he can add credentials related to source control repositories (e.g., GitHub credentials), CI/CD managers (e.g., Jenkins) and Deployment Platforms.
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Credentials Page" src="../img/smartclide-ide-credentials-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        For example, if the user wants to connect his GitHub profile with the SmartCLIDE IDE, he can add his credentials by clicking the '+' icon in the upper right corner, and fill the requested fields in the form that opens (i.e., Type->GitHub, GitHub URL, username and GitHub Personal Access Token). 
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Git Page" src="../img/smartclide-ide-git-page.png" /></p>
-<h2 id="building-the-first-service">Building the first service</h2></div>
+<h1 id="smartclide-context">smartclide-context</h1>
+<p>OpenSmartCLIDE Context Handling Component</p>
+<h2 id="preconditions-to-build-and-run-context-handling">Preconditions to build and run Context Handling</h2>
+<p>To build and run Context Handling, the following software is required:</p>
+<ul>
+<li>Java (at least version 11)</li>
+<li>Apache Maven (at least version 3.5.4)</li>
+<li>Docker (for running tests and deploying Context Handling on the SmartCLIDE cluster)</li>
+<li>docker-compose (for running local sample instance only)</li>
+</ul>
+<h2 id="how-to-build-context-handling">How to build Context Handling</h2>
+<p>Context Handling can be built using maven with the following command:</p>
+<p><code>shell
+  mvn install</code></p>
+<p>In order to build and push a container image that can be deployed, the following command can be used:</p>
+<p><code>shell
+  mvn install
+  mvn jib:build -pl smartclide-monitoring -Djib.to.image="${IMAGE_NAME:IMAGE_TAG}" -Djib.to.auth.username="${CONTAINER_REGISTRY_USERNAME}" -Djib.to.auth.password="${CONTAINER_REGISTRY_TOKEN}"</code></p>
+<h2 id="how-to-run-context-handling">How to run Context Handling</h2>
+<p>A sample configuration and docker-compose file can be found in the <a href="https://github.com/eclipse-opensmartclide/smartclide-context/tree/main/samples">samples folder</a>.</p>
+<p>You can run the sample with the following command: </p>
+<p><code>shell
+   docker-compose -f samples/docker-compose.yml up</code></p>
+<h2 id="how-to-configure-context-handling">How to configure Context Handling</h2>
+<h3 id="monitoring-config">Monitoring Config</h3>
+<p><strong>monitoring-config.xml</strong></p>
+<p>An example monitoring configuration can be found here: <a href="https://github.com/eclipse-opensmartclide/smartclide-context/blob/main/samples/config/monitoring-config.xml">monitoring-config.xml</a></p>
+<p><strong>monitoring-config.xsd</strong></p>
+<p>The corresponding XSD file can be found here: <a href="https://github.com/eclipse-opensmartclide/smartclide-context/blob/main/samples/config/monitoring-config.xsd">monitoring-config.xsd</a></p>
+<h3 id="description">Description</h3>
+<h4 id="indexes">indexes</h4>
+<p>Each index entry has the following mandatory attributes</p>
+<ul>
+<li>id: The unique name of the index</li>
+<li>location: The URI of the location the index is stored</li>
+</ul>
+<h4 id="datasources">datasources</h4>
+<p>Each datasource entry has the following mandatory attributes</p>
+<ul>
+<li>id:The unique name of the datasource</li>
+<li>type:The type of the datasource. Possible values are: filesystem, webservice, database, messageBroker</li>
+<li>monitor:The class of the monitor to be used. Possible values are:<ul>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.database.DatabaseMonitor</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.file.FileSystemMonitor</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.file.FilePairSystemMonitor</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.file.FileTripletSystemMonitor</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.webservice.MessageBrokerMonitor</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.webservice.WebServiceMonitor</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.monitors.GitlabCommitMonitor</li>
+</ul>
+</li>
+<li>options: Options for the datasource can be entered using this value. The options are dependent on the datasource to be used</li>
+<li>uri:The uri of the data source to be monitored</li>
+<li>class:The following datasource implementations are available<ul>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.DatabaseDataSource</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.FilePairSystemDataSource</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.FileSystemDataSource</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.FileTripletSystemDataSource</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.MessageBrokerDataSource</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.WebServiceDataSource</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.config.models.datasources.GitlabDataSource</li>
+</ul>
+</li>
+</ul>
+<h4 id="interpreters">interpreters</h4>
+<p>Each interpreter entry has the following mandatory attributes</p>
+<ul>
+<li>id: The unique name of the interpreter</li>
+<li>
+<p>configuration</p>
+<ul>
+<li>analyser: The analyser class to be used. The following implementations are available:<ul>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.database.DatabaseAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.file.FileAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.file.FilePairAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.file.FileTripletAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.messagebroker.MessageBrokerAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.webservice.WebServiceAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.webserviceGitAnalyser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.analyser.webservice.GitlabCommitAnalyser</li>
+</ul>
+</li>
+<li>
+<p>parser: The parser class to be used. The following implementations are available:</p>
+<ul>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.database.DatabaseParser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.file.FileParser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.file.FilePairParser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.file.FileTripletParser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.messagebroker.MessageBrokerParser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.webservice.WebServiceParser</li>
+<li>package org.eclipse.opensmartclide.context.monitoring.parser.GitlabCommitParser</li>
+</ul>
+</li>
+<li>
+<p>type: Currently only used for File analyser and parser. Defines the file extensions to be used.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="monitors">monitors</h4>
+<p>Each monitor entry has the following mandatory attributes</p>
+<ul>
+<li>id: The unique name of the monitor</li>
+<li>datasource: The id of one previously defined datasource (see above)</li>
+<li>interpreter: The id of one previously defined interpreter (see above)</li>
+<li>index: The id of one previously defined index (see above)</li>
+</ul></div>
             </div>
         </div>
 

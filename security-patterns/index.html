@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/security-patterns/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Service Discovery - The OpenSmartCLIDE IDE</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">The OpenSmartCLIDE IDE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">For the developer <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../getting-started-developer/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Workflows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../workflows/" class="dropdown-item">Getting Started</a>
+</li>
+            
+<li>
+    <a href="../workflows/example1/" class="dropdown-item">Example 1</a>
+</li>
+            
+<li>
+    <a href="../workflows/example2/" class="dropdown-item">Example 2</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../getting-started-sysadmin/" class="nav-link">For the sysadmin</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Building OpenSmartCLIDE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Service Discovery</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../service-discovery/" class="dropdown-item">Service Discovery</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Service Creation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Service Creation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../service-creation/" class="dropdown-item">Service Creation Backend</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Service Creation Testing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../service-creation-testing/" class="dropdown-item">Service Creation Testing</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Service Creation Testing (Theia)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../service-creation-testing-theia/" class="dropdown-item">Service Creation Testing Frontend</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design Patterns</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../design-patterns/" class="dropdown-item">Design Pattern Selection Frontend</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Service Maintenance</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Technical Debt (TD) Principal</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../technical-debt-td-principal/" class="dropdown-item">TD Principal Backend</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Technical Debt (TD) Interest</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../technical-debt-td-interest/" class="dropdown-item">TD Interest Backend</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Technical Debt (TD) Reusability Index</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../technical-debt-td-reusability-index/" class="dropdown-item">TD Reusability Index Backend</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Technical Debt (TD) Reusability Index (Theia)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../technical-debt-td-reusability-index-theia/" class="dropdown-item">TD & Reusability Frontend</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Runtime Monitoring & Verification</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../runtime-monitoring-verification/" class="dropdown-item">SmartCLIDE-RMV</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Context Handling</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../context-handling/" class="dropdown-item">Context Handling</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Smart Assistant</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../smart-assistant/" class="dropdown-item">Smartclide-DLE</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security-related Static Analysis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../security-related-static-analysis/" class="dropdown-item">Service Discovery</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Security Patterns</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Service Discovery</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Inter-process Communication</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Message-Oriented Middleware (MoM)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../message-oriented-middleware-mom/" class="dropdown-item">MOM</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">API Gateway</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../api-gateway/" class="dropdown-item">API Gateway</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database API</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../database-api/" class="dropdown-item">DB API</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../security-related-static-analysis/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../message-oriented-middleware-mom/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eclipse-opensmartclide/smartclide-security-patternsdocs/*docs/index.md" class="nav-link">Edit on </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#security-patterns-service" class="nav-link">Security Patterns Service</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#security-patterns-service-installation" class="nav-link">Security Patterns Service Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#security-patterns-service-usage" class="nav-link">Security Patterns Service Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!--
+   Copyright (C) 2021-2022 CERTH
+
+   This program and the accompanying materials are made
+   available under the terms of the Eclipse Public License 2.0
+   which is available at https://www.eclipse.org/legal/epl-2.0/
+
+   SPDX-License-Identifier: EPL-2.0
+-->
+<h1 id="security-patterns-service">Security Patterns Service</h1>
+<h2 id="security-patterns-service-installation">Security Patterns Service Installation</h2>
+<p>In this wiki page we describe how the Security Patterns Service can be installed.</p>
+<h3 id="installation-using-anaconda">Installation using Anaconda</h3>
+<p>In this section, we provide instructions on how the user can build the python Flask server of the Security Patterns Service from scratch, using the Anaconda virtual environment. The Security Patterns Service is developed to run on Windows systems with python 3.6.* installed. We suggest installing python via the Anaconda distribution as it provides an easy way to create a virtual environment and install dependencies. The configuration steps needed, are described below:</p>
+<ul>
+<li>
+<p><strong>Step 1</strong>: Download the latest <a href="https://www.anaconda.com/products/individual">Anaconda distribution</a> and follow the installation steps described in the <a href="https://docs.anaconda.com/anaconda/install/windows/">Anaconda documentation</a>.</p>
+</li>
+<li>
+<p><strong>Step 2</strong>: Open Anaconda cmd. Running Anaconda cmd activates the base environment. We need to create a specific environment to run the Security Patterns Service. Create a new python 3.6.4 environment by running the following command:</p>
+</li>
+</ul>
+<pre><code>conda create --name security_patterns python=3.6.4
+</code></pre>
+<p>This command will result in the creation of a conda environment named security_patterns. In order to activate the new environment, execute the following command:</p>
+<pre><code>conda activate security_patterns
+</code></pre>
+<ul>
+<li><strong>Step 3</strong>: Now that the environment is activated, install the required libraries:</li>
+</ul>
+<pre><code>conda install -c anaconda flask flask-cors pymongo waitress dnspython colorama
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 4</strong>: Clone the latest Security Patterns version that can be found in the present Github repository of the Security Patterns Service and navigate to the root directory.</p>
+</li>
+<li>
+<p><strong>Step 5</strong>: To start the Security Patterns using the built-in Flask server, use the command promt inside the active Conda environment and execute the following command:</p>
+</li>
+</ul>
+<pre><code>python main.py 0.0.0.0 5000 builtin --debug
+</code></pre>
+<p>This command will start the built-in Flask server locally (0.0.0.0) on port 5000.</p>
+<p>Or you can start the Security Patterns using the Waitress server. Use the command promt inside the active Conda environment and execute the following command:</p>
+<pre><code>python main.py 0.0.0.0 5000 waitress
+</code></pre>
+<p>This command will start the Waitress server locally (0.0.0.0) on port 5000. Note that the Waitress mode is higly recommended in real production environments, since it supports scaling and multiple-request handling features.</p>
+<h2 id="security-patterns-service-usage">Security Patterns Service Usage</h2>
+<p>In this wiki page we describe how the Security Patterns Service can be used. 
+Given a problem statement and a set of forces acting on the system, design patterns instruct its stakeholders on how to build this system. Patterns in the information technology environment provide information system architects with a technique for creating reusable solutions to design challenges. In this document, we describe the main functionality of the Security Patterns web service and how it can be put in practice in order to provide the user with useful information regarding Security Requirements (e.g. Authentication, Authorization, etc.) Security Patterns (e.g. Authenticator, Cryptographic), Security Control Technologies (e.g. OAuth2.0, Two Factor Authentication, etc.) and Security Libraries in Java or Python that utilize the aforementioned technologies. As part of the SmartCLIDE platform, the current service is an attempt to assist developers in selecting the most suitable security patterns and implementing them in their software. Detailed description and indicative examples of the usage of the Security Patterns web service are provided, to facilitate better understanding.</p>
+<p>The Security Patterns web service provides the user with valuable information on the security domain as mentioned earlier. All information regarding this service is stored in a mongo database and the information of interest will be extracted and presented to the user when requested. This is achieved through a dedicated API exposed by the RESTful web server, which is, in fact, a simple HTTP GET request. The inputs that need to be provided as parameters to this request are listed below:
+|   Parameter  |                           Description                           | Required |                                                                                                                                                                Valid Inputs                                                                                                                                                               |
+|:------------:|:---------------------------------------------------------------:|:--------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| requirement      | The main security category that the user is interested in.        |    Yes   | A string value acting as security requirement (e.g. Authentication, Authorization, etc.). |
+| pattern | The security pattern that the user is interested in.     |    No    | A string acting as security pattern (e.g. Authenticator, Cryptographic, etc.). Default value is None.                      |
+| technology | The security control technology that the user is interested in.      |    No    | A string acting as security control Technology (e.g. Authenticator, Cryptographic, etc.). Default value is None.                                                                                                                                                     |
+| language | The programming language that the user is interested in employing for their purpose.    |    No    | One of the following string values: Java, Python. Default value is None.                                                                                                                                                                          |</p>
+<p>The output of the Security Patterns web service is a JSON file containing the information that the user requested. The JSON file contains the security requirement, the security pattern(s) of the aforementioned requirement, the security control technology(ies) of the corresponding security pattern(s) and the corresponding libraries all accompanied by descriptions, characteristics, online resources and other useful information. It should be noted that the requirement parameter is necessary. Thus, it should be provided by the user otherwise no results will be returned. If no values are given for all the rest of the parameters, all results related to that particular requirement will be presented. The produced files are usually very long especially for the case that the user selects a requirement without specifying any other parameter. By setting the value of the language parameter to ”Java” or “Python” the user narrows down the libraries that will be returned to those designed only for Java or Python respectively.</p>
+<p>For better understanding, an example is presented demonstrating how the Security Patterns web service can be invoked through a curl command. In the given example, we set the following parameters:</p>
+<ul>
+<li>
+<p><strong>requirement</strong>: Authentication</p>
+</li>
+<li>
+<p><strong>pattern</strong>: Authenticator</p>
+</li>
+<li>
+<p><strong>technology</strong>: OAuth2.0</p>
+</li>
+<li>
+<p><strong>language</strong>: Java</p>
+</li>
+</ul>
+<p>Hence, the following HTTP GET Request needs to be submitted:</p>
+<pre><code>http://160.40.53.132:5000/DataBase?requirement=Authentication&amp;pattern=Authenticator&amp;technology=OAuth2.0&amp;language=Java
+</code></pre>
+<p>After submitting the request, the Security Patterns service is invoked. In brief, the service selects the “Authentication” security requirement, the “Authenticator” security pattern, the “OAuth2.0” security control technology and “Java” programming language and returns all the relevant information. After the successful execution of the analysis, a JSON report with the results is produced and sent as a response to the user. The produced JSON for the above example is presented below.</p>
+<pre><code>{
+   &quot;requirement name&quot;:&quot;Authentication&quot;,
+   &quot;_id&quot;:&quot;61dd5c88c43a7d33907484b2&quot;,
+   &quot;description&quot;:&quot;The system must validate the identity of its externals before interacting with them. Customers' identities must be authenticated in order to prevent unauthorized access.&quot;,
+   &quot;standard&quot;:&quot;ISO 27001&quot;,
+   &quot;patterns&quot;:{
+      &quot;pattern name&quot;:&quot;Authenticator&quot;,
+      &quot;_id&quot;:&quot;61dd5cefc43a7d33907484b7&quot;,
+      &quot;description&quot;:&quot;The Authenticator pattern describes a general mechanism for providing identification and authentication to a server from a client. It has the added feature of allowing protocol negotiation to take place using the same procedures. The pattern operates by offering an authentication negotiation object which then provides the protected object only after authentication is successful.&quot;,
+      &quot;pattern type&quot;:&quot;design pattern&quot;,
+      &quot;technologies&quot;:[
+         {
+            &quot;_id&quot;:&quot;61dd5d46c43a7d33907484c2&quot;,
+            &quot;technology name&quot;:&quot;OAuth2.0&quot;,
+            &quot;description&quot;:&quot;OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses on client developer simplicity while providing specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. This specification and its extensions are being developed within the IETF OAuth Working Group.&quot;,
+            &quot;strength&quot;:&quot;&quot;,
+            &quot;related_security_libraries&quot;:[
+               {
+                  &quot;_id&quot;:&quot;61dd5e10c43a7d33907484c9&quot;,
+                  &quot;library name&quot;:&quot;Spring Security&quot;,
+                  &quot;language&quot;:&quot;Java&quot;,
+                  &quot;resource&quot;:[
+                     &quot;https://spring.io/projects/spring-security&quot;,
+                     &quot;https://github.com/spring-projects/spring-security&quot;
+                  ],
+                  &quot;guidelines&quot;:[
+                     &quot;https://google&quot;,
+                     &quot;https://youtube&quot;
+                  ],
+                  &quot;code examples&quot;:[
+
+                  ]
+               },
+               {
+                  &quot;_id&quot;:&quot;61dd5e10c43a7d33907484ca&quot;,
+                  &quot;library name&quot;:&quot;Google Auth&quot;,
+                  &quot;language&quot;:&quot;Java&quot;,
+                  &quot;resource&quot;:[
+                     &quot;https://github.com/googleapis/google-auth-library-java&quot;
+                  ],
+                  &quot;guidelines&quot;:[
+                     &quot;https://google&quot;,
+                     &quot;https://youtube&quot;
+                  ],
+                  &quot;code examples&quot;:[
+                     {
+                        &quot;description&quot;:&quot;This example shows how you can add the \u2026&quot;,
+                        &quot;code&quot;:&quot;public void \u2026.\n \n&quot;
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
+</code></pre>
+<p>As can be seen above, the JSON object consists of five main elements, which are listed below:</p>
+<ul>
+<li>
+<p><strong>requirement name</strong>: which is the main security requirement that the user is interested in (in this case “Authentication”).</p>
+</li>
+<li>
+<p><strong>id</strong>: which is the id number of this particular requirement as it is stored in the mongo database (in this case “61dd5c88c43a7d33907484b2”).</p>
+</li>
+<li>
+<p><strong>description</strong>: which is the requirement’s basic description (in this case “The system must validate the identity of its externals before interacting with them. Customers' identities must be authenticated in order to prevent unauthorized access.”).</p>
+</li>
+<li>
+<p><strong>standard</strong>: which is the standard that the requirement has been extracted from (in this case "ISO 27001"). </p>
+</li>
+<li>
+<p><strong>patterns</strong>: which contains all related security patterns to that specific security requirement or the specific security pattern that the user requested (in this case “Authenticator”).</p>
+</li>
+</ul>
+<p>Accordingly to the requirement, the information regarding the patterns, technologies and libraries can be seen in the JSON file.</p>
+<p>Another example is presented below where only two parameters are specified in case the user is interested in a particular requirement that will be processed in a specific programming language. In this case, the user needs to be informed of all potential security patterns and control technologies that can be put in practice. The parameters for this example are shown below:</p>
+<ul>
+<li>
+<p><strong>requirement</strong>: Authentication</p>
+</li>
+<li>
+<p><strong>language</strong>: Java</p>
+</li>
+</ul>
+<p>The following HTTP GET Request needs to be submitted:</p>
+<pre><code>http://160.40.53.132:5000/DataBase?requirement=Authentication&amp;language=Java
+</code></pre>
+<p>After submitting the request, the Security Patterns service returns the following JSON report with the results: </p>
+<pre><code>{
+   &quot;requirement name&quot;:&quot;Authentication&quot;,
+   &quot;_id&quot;:&quot;61dd5c88c43a7d33907484b2&quot;,
+   &quot;description&quot;:&quot;The system must validate the identity of its externals before interacting with them. Customers' identities must be authenticated in order to prevent unauthorized access.&quot;,
+   &quot;standard&quot;:&quot;ISO 27001&quot;,
+   &quot;patterns&quot;:[
+      {
+         &quot;pattern name&quot;:&quot;Authenticator&quot;,
+         &quot;_id&quot;:&quot;61dd5cefc43a7d33907484b7&quot;,
+         &quot;description&quot;:&quot;The Authenticator pattern describes a general mechanism for providing identification and authentication to a server from a client. It has the added feature of allowing protocol negotiation to take place using the same procedures. The pattern operates by offering an authentication negotiation object which then provides the protected object only after authentication is successful.&quot;,
+         &quot;pattern type&quot;:&quot;design pattern&quot;,
+         &quot;technologies&quot;:[
+            {
+               &quot;_id&quot;:&quot;61dd5d46c43a7d33907484c0&quot;,
+               &quot;technology name&quot;:&quot;Basic Authentication&quot;,
+               &quot;description&quot;:&quot;&quot;,
+               &quot;strength&quot;:&quot;&quot;,
+               &quot;related_security_libraries&quot;:[
+                  {
+                     &quot;_id&quot;:&quot;61dd5e10c43a7d33907484c9&quot;,
+                     &quot;library name&quot;:&quot;Spring Security&quot;,
+                     &quot;language&quot;:&quot;Java&quot;,
+                     &quot;resource&quot;:[
+                        &quot;https://spring.io/projects/spring-security&quot;,
+                        &quot;https://github.com/spring-projects/spring-security&quot;
+                     ],
+                     &quot;guidelines&quot;:[
+                        &quot;https://www.youtube.com/watch?v=her_7pa0vrg&amp;ab_channel=Amigoscode&quot;
+                     ],
+                     &quot;code examples&quot;:[
+
+                     ]
+                  }
+               ]
+            },
+            {
+               &quot;_id&quot;:&quot;61dd5d46c43a7d33907484c1&quot;,
+               &quot;technology name&quot;:&quot;OAuth1.0&quot;,
+               &quot;description&quot;:&quot;OAuth 2.1 is an in-progress effort to consolidate and simplify the most commonly used features of OAuth 2.0.&quot;,
+               &quot;strength&quot;:&quot;&quot;,
+               &quot;related_security_libraries&quot;:[
+                  {
+                     &quot;_id&quot;:&quot;61dd5e10c43a7d33907484c9&quot;,
+                     &quot;library name&quot;:&quot;Spring Security&quot;,
+                     &quot;language&quot;:&quot;Java&quot;,
+                     &quot;resource&quot;:[
+                        &quot;https://spring.io/projects/spring-security&quot;,
+                        &quot;https://github.com/spring-projects/spring-security&quot;
+                     ],
+                     &quot;guidelines&quot;:[
+                        &quot;https://www.youtube.com/watch?v=her_7pa0vrg&amp;ab_channel=Amigoscode&quot;
+                     ],
+                     &quot;code examples&quot;:[
+
+                     ]
+                  }
+               ]
+            },
+            {
+               &quot;_id&quot;:&quot;61dd5d46c43a7d33907484c2&quot;,
+               &quot;technology name&quot;:&quot;OAuth2.0&quot;,
+               &quot;description&quot;:&quot;OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses on client developer simplicity while providing specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. This specification and its extensions are being developed within the IETF OAuth Working Group.&quot;,
+               &quot;strength&quot;:&quot;&quot;,
+               &quot;related_security_libraries&quot;:[
+                  {
+                     &quot;_id&quot;:&quot;61dd5e10c43a7d33907484c9&quot;,
+                     &quot;library name&quot;:&quot;Spring Security&quot;,
+                     &quot;language&quot;:&quot;Java&quot;,
+                     &quot;resource&quot;:[
+                        &quot;https://spring.io/projects/spring-security&quot;,
+                        &quot;https://github.com/spring-projects/spring-security&quot;
+                     ],
+                     &quot;guidelines&quot;:[
+                        &quot;https://www.youtube.com/watch?v=her_7pa0vrg&amp;ab_channel=Amigoscode&quot;
+                     ],
+                     &quot;code examples&quot;:[
+
+                     ]
+                  },
+                  {
+                     &quot;_id&quot;:&quot;61dd5e10c43a7d33907484ca&quot;,
+                     &quot;library name&quot;:&quot;Google Auth&quot;,
+                     &quot;language&quot;:&quot;Java&quot;,
+                     &quot;resource&quot;:[
+                        &quot;https://github.com/googleapis/google-auth-library-java&quot;
+                     ],
+                     &quot;guidelines&quot;:[
+                        &quot;https://google&quot;,
+                        &quot;https://youtube&quot;
+                     ],
+                     &quot;code examples&quot;:[
+                        {
+                           &quot;description&quot;:&quot;This example shows how you can add the \u2026&quot;,
+                           &quot;code&quot;:&quot;public void \u2026.\n \n&quot;
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               &quot;_id&quot;:&quot;61dd5d46c43a7d33907484c4&quot;,
+               &quot;technology name&quot;:&quot;Two Factor Authentication&quot;,
+               &quot;description&quot;:&quot;&quot;,
+               &quot;strength&quot;:&quot;&quot;,
+               &quot;related_security_libraries&quot;:[
+                  {
+                     &quot;_id&quot;:&quot;61dd5e10c43a7d33907484c9&quot;,
+                     &quot;library name&quot;:&quot;Spring Security&quot;,
+                     &quot;language&quot;:&quot;Java&quot;,
+                     &quot;resource&quot;:[
+                        &quot;https://spring.io/projects/spring-security&quot;,
+                        &quot;https://github.com/spring-projects/spring-security&quot;
+                     ],
+                     &quot;guidelines&quot;:[
+                        &quot;https://www.youtube.com/watch?v=her_7pa0vrg&amp;ab_channel=Amigoscode&quot;
+                     ],
+                     &quot;code examples&quot;:[
+
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
+</code></pre>
+<p>As can be seen above, in this case all security patterns and control technologies related to Authentication are presented to the user, along with all the corresponding detailed information. In addition, all libraries associated with the aforementioned control technologies are presented but only those supported by Java programming language, as the user requested.</p>
+<p>Please note that the database containing all the information that the Security Patterns service extracts, is continuously updated and enriched. Fields that are currently empty will be gradually filled in the near future. </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2023 The SmartCLIDE Consortium</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/getting-started-developer/">
+        <link rel="canonical" href="https://eclipse-opensmartclide.github.io/smartclide-docs/database-api/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Getting Started - The OpenSmartCLIDE IDE</title>
+        <title>DB API - The OpenSmartCLIDE IDE</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -36,12 +36,12 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">For the developer <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Getting Started</a>
+    <a href="../getting-started-developer/" class="dropdown-item">Getting Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -66,7 +66,7 @@
                             <li class="navitem">
                                 <a href="../getting-started-sysadmin/" class="nav-link">For the sysadmin</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Building OpenSmartCLIDE <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -257,7 +257,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../database-api/" class="dropdown-item">DB API</a>
+    <a href="./" class="dropdown-item active">DB API</a>
 </li>
     </ul>
   </li>
@@ -274,14 +274,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../api-gateway/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../workflows/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eclipse-opensmartclide/smartclide-db-apidocs/*docs/index.md" class="nav-link">Edit on </a>
                             </li>
                     </ul>
                 </div>
@@ -301,17 +304,41 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#for-the-developer" class="nav-link">For the developer</a>
+            <li class="nav-item" data-level="1"><a href="#eclipse-opensmartclide-db-api" class="nav-link">eclipse-opensmartclide-db-api</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#registration-and-login" class="nav-link">Registration and login</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#setting-up-profile" class="nav-link">Setting up profile</a>
+            <li class="nav-item" data-level="2"><a href="#users-getpostputdelete" class="nav-link">/users (GET,POST,PUT,DELETE)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#building-the-first-service" class="nav-link">Building the first service</a>
+            <li class="nav-item" data-level="2"><a href="#teams-getpostputdelete" class="nav-link">/teams (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ci_managers-getpostputdelete" class="nav-link">/ci_managers (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deployment_platforms-getpostputdelete" class="nav-link">/deployment_platforms (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#service_registries-getpostputdelete" class="nav-link">/service_registries (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git_credentials-getpostputdelete" class="nav-link">/git_credentials (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#services-getpostputdelete" class="nav-link">/services (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#workflows-getpostputdelete" class="nav-link">/workflows (GET,POST,PUT,DELETE)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deployments-getpostputdelete" class="nav-link">/deployments (GET,POST,PUT,DELETE)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -322,67 +349,135 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="for-the-developer">For the developer</h1>
-<p>This page contains some very-easy-to-follow guides for developers to start building services using the SmartCLIDE IDE.</p>
-<h2 id="registration-and-login">Registration and login</h2>
-<div style="text-align: justify;">
-    <p>
-        The first thing a developer needs to do in order to start using the SmartCLIDE IDE, is to navigate to the <a href="https://ide.che.smartclide.eu/">SmartCLIDE IDE landing page</a>:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Landing Page" src="../img/smartclide-ide-landing-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        Then, by hitting the 'SmartCLIDE Eclipse Che' button, the user is redirected to the SmartCLIDE Login Page:  
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Login Page" src="../img/smartclide-ide-login-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        From there, the developer hits the "Register" button, and is redirected to the SmartCLIDE IDE Registration Page:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Registration Page" src="../img/smartclide-ide-registration-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        After the developer has filled in his details, a verification link is sent through email to the email account that he provided, and the following page is presented to the user:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE IDE Email Verification Page" src="../img/smartclide-ide-email-verification-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        The user clicks the verification link sent to him in order to verify his account. Then, he can navigate back to the SmartCLIDE Login Page, enter his credentials and log into the SmartCLIDE IDE. After that, the SmartCLIDE Main Page is presented to the user:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Main Page" src="../img/smartclide-ide-main-page.png" /></p>
-<h2 id="setting-up-profile">Setting up profile</h2>
-<div style="text-align: justify;">
-    <p>
-        After landing to the SmartCLIDE Main Page, the developer can edit his profile by clicking the little human icon in the upper right corner, and then clicking on the "My Account" option. By doing this, he is redirected to the SmartCLIDE Profile Editing Page:
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Profile Editing Page" src="../img/smartclide-ide-profile-editing-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        From the SmartCLIDE Profile Editing Page the user can edit his security credentials (SmartCLIDE uses <a href="https://www.keycloak.org/">Keycloak</a> for user authentication and authorization), like email, first name, last name and password. In addition, by clicking on the "Credentials" option the user is redirected to a new view where he can add credentials related to source control repositories (e.g., GitHub credentials), CI/CD managers (e.g., Jenkins) and Deployment Platforms.
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Credentials Page" src="../img/smartclide-ide-credentials-page.png" /></p>
-<div style="text-align: justify;">
-    <p>
-        For example, if the user wants to connect his GitHub profile with the SmartCLIDE IDE, he can add his credentials by clicking the '+' icon in the upper right corner, and fill the requested fields in the form that opens (i.e., Type->GitHub, GitHub URL, username and GitHub Personal Access Token). 
-    </p>
-</div>
-
-<p><img alt="The SmartCLIDE Git Page" src="../img/smartclide-ide-git-page.png" /></p>
-<h2 id="building-the-first-service">Building the first service</h2></div>
+<h1 id="eclipse-opensmartclide-db-api">eclipse-opensmartclide-db-api</h1>
+<p>A RESTful API for accessing the resources of the internal OpenSmartCLIDE database. The API exposes the following endpoints:</p>
+<h2 id="users-getpostputdelete">/users (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request">Example POST Request</h3>
+<pre><code class="language-url">/users
+</code></pre>
+<h3 id="example-request-body">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;email&quot;: &quot;test@mail.com&quot;,
+    &quot;team_id&quot;: &quot;628c87f6aa5a2857398a80d8&quot;
+}   
+</code></pre>
+<h2 id="teams-getpostputdelete">/teams (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_1">Example POST Request</h3>
+<pre><code class="language-url">/teams
+</code></pre>
+<h3 id="example-request-body_1">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test team&quot;,
+    &quot;workflows&quot;: [],
+    &quot;services&quot;: [],
+    &quot;deployments&quot;: []
+}   
+</code></pre>
+<h2 id="ci_managers-getpostputdelete">/ci_managers (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_2">Example POST Request</h3>
+<pre><code class="language-url">/ci_managers
+</code></pre>
+<h3 id="example-request-body_2">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;type&quot;: &quot;jenkins&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test_user&quot;,
+    &quot;token&quot;: &quot;giuggff8ff7igfigfiugi...&quot;
+}   
+</code></pre>
+<h2 id="deployment_platforms-getpostputdelete">/deployment_platforms (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_3">Example POST Request</h3>
+<pre><code class="language-url">/deployment_platforms
+</code></pre>
+<h3 id="example-request-body_3">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test_user&quot;,
+    &quot;token&quot;: &quot;giuggff8ff7igfigfiugi...&quot;
+}
+</code></pre>
+<h2 id="service_registries-getpostputdelete">/service_registries (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_4">Example POST Request</h3>
+<pre><code class="language-url">/service_registries
+</code></pre>
+<h3 id="example-request-body_4">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;type&quot;: &quot;github&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test_user&quot;,
+    &quot;token&quot;: &quot;dnsuibfifgyucgufgu...&quot;
+}
+</code></pre>
+<h2 id="git_credentials-getpostputdelete">/git_credentials (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_5">Example POST Request</h3>
+<pre><code class="language-url">/git_credentials
+</code></pre>
+<h3 id="example-request-body_5">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;type&quot;: &quot;github&quot;,
+    &quot;url&quot;: &quot;http://some_url&quot;,
+    &quot;username&quot;: &quot;test&quot;,
+    &quot;token&quot;: &quot;bcsuifgsiufgsfiuiu&quot;
+}
+</code></pre>
+<h2 id="services-getpostputdelete">/services (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_6">Example POST Request</h3>
+<pre><code class="language-url">/services
+</code></pre>
+<h3 id="example-request-body_6">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test service&quot;,
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;registry_id&quot;: &quot;628c8dab80b42501489a85da&quot;,
+    &quot;git_credentials_id&quot;: &quot;628c922780b42501489a85dd&quot;,
+    &quot;url&quot;: &quot;http://test_url&quot;,
+    &quot;description&quot;: &quot;A short service description..&quot;,
+    &quot;is_public&quot;: true,
+    &quot;licence&quot;: &quot;test_licence&quot;,
+    &quot;framework&quot;: &quot;java&quot;,
+    &quot;created&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;,
+    &quot;updated&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;
+}
+</code></pre>
+<h2 id="workflows-getpostputdelete">/workflows (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_7">Example POST Request</h3>
+<pre><code class="language-url">/workflows
+</code></pre>
+<h3 id="example-request-body_7">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test service&quot;,
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;git_credentials_id&quot;: &quot;628c922780b42501489a85dd&quot;,
+    &quot;url&quot;: &quot;http://test_url&quot;,
+    &quot;description&quot;: &quot;A short workflow description..&quot;,
+    &quot;is_public&quot;: true,
+    &quot;created&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;,
+    &quot;updated&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;
+}
+</code></pre>
+<h2 id="deployments-getpostputdelete">/deployments (GET,POST,PUT,DELETE)</h2>
+<h3 id="example-post-request_8">Example POST Request</h3>
+<pre><code class="language-url">/deployments
+</code></pre>
+<h3 id="example-request-body_8">Example Request body</h3>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Test service&quot;,
+    &quot;user_id&quot;: &quot;628c87f6aa5a2857398a80a0&quot;,
+    &quot;git_credentials_id&quot;: &quot;628c922780b42501489a85dd&quot;,
+    &quot;url&quot;: &quot;http://test_url&quot;,
+    &quot;workflow_id&quot;: &quot;6283ac19189ff14b1516c11c&quot;,
+    &quot;service_id&quot;: &quot;628c928d80b42501489a85de&quot;,
+    &quot;version&quot;: &quot;$deployment_version&quot;,
+    &quot;state&quot;: &quot;$deployment_state&quot;,
+    &quot;created&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;,
+    &quot;updated&quot;: &quot;2022-01-14T15:42:25.000+00:00&quot;
+}
+</code></pre></div>
             </div>
         </div>
 
